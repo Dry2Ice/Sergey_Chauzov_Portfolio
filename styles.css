@@ -3,17 +3,21 @@
   --text: #1f2a37;
   --card: #ffffff;
   --accent: #2f6feb;
+  --accent-2: #7b3cff;
   --muted: #5b6775;
   --border: #d7deea;
+  --shadow: 0 10px 28px rgba(27, 56, 95, 0.08);
 }
 
 body.dark {
-  --bg: #0f1724;
+  --bg: #0d1422;
   --text: #e5ecf4;
   --card: #152133;
   --accent: #7ca4ff;
+  --accent-2: #c197ff;
   --muted: #b3c2d5;
   --border: #2f3f56;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
 }
 
 * { box-sizing: border-box; }
@@ -21,7 +25,10 @@ body.dark {
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 15% -10%, color-mix(in oklab, var(--accent), transparent 75%), transparent 42%),
+    radial-gradient(circle at 92% 0%, color-mix(in oklab, var(--accent-2), transparent 78%), transparent 38%),
+    var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -34,9 +41,9 @@ body {
 .header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 30;
   background: color-mix(in oklab, var(--bg), transparent 8%);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -52,6 +59,7 @@ body {
   font-weight: 800;
   color: var(--text);
   text-decoration: none;
+  letter-spacing: .2px;
 }
 
 .nav {
@@ -65,6 +73,7 @@ body {
   text-decoration: none;
   padding: .45rem .8rem;
   border-radius: 999px;
+  transition: .2s ease;
 }
 
 .nav-link.active,
@@ -91,7 +100,31 @@ body {
   margin-bottom: .4rem;
 }
 
-h1 { line-height: 1.18; margin: .3rem 0 1rem; }
+h1 { line-height: 1.16; margin: .3rem 0 1rem; font-size: clamp(1.8rem, 3vw, 3rem); }
+h2 { margin-top: .1rem; }
+
+.cta-row {
+  display: flex;
+  gap: .65rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: .6rem .9rem;
+  border-radius: .7rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+}
 
 .grid {
   display: grid;
@@ -107,10 +140,154 @@ h1 { line-height: 1.18; margin: .3rem 0 1rem; }
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.highlight {
+  margin-bottom: 3rem;
+}
+
+.muted { color: var(--muted); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: .6rem;
+}
+
+.stat-card {
+  background: color-mix(in oklab, var(--card), transparent 8%);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.stat-number {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.stat-label { margin: .25rem 0 0; color: var(--muted); }
+
+.role-switch,
+.scenario-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--bg), var(--card) 35%);
+  border-radius: .75rem;
+  padding: .2rem;
+  margin: .8rem 0;
+  flex-wrap: wrap;
+}
+
+.role-btn,
+.scenario-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: .45rem .75rem;
+  border-radius: .55rem;
+  cursor: pointer;
+}
+
+.role-btn.active,
+.scenario-btn.active {
+  background: var(--card);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.role-panel,
+.scenario-panel {
+  border-top: 1px dashed var(--border);
+  margin-top: .4rem;
+  padding-top: .6rem;
+}
+
+.timeline {
+  display: grid;
+  gap: .65rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: .8rem;
+  align-items: flex-start;
+  padding: .55rem .6rem;
+  border-radius: .75rem;
+  background: color-mix(in oklab, var(--card), var(--bg) 30%);
+}
+
+.timeline-item span {
+  display: inline-flex;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  color: #fff;
+  flex: 0 0 auto;
 }
 
 ul { padding-left: 1.2rem; margin: .5rem 0 0; }
 li + li { margin-top: .45rem; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card), var(--bg) 35%);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.compare-col {
+  border: 1px solid var(--border);
+  border-radius: .85rem;
+  padding: .8rem;
+}
+
+.featured-col {
+  border-color: color-mix(in oklab, var(--accent), var(--border) 45%);
+  background: color-mix(in oklab, var(--accent), transparent 95%);
+}
+
+.faq-q {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card), var(--bg) 30%);
+  color: var(--text);
+  text-align: left;
+  border-radius: .7rem;
+  padding: .75rem .8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-a {
+  margin-top: .4rem;
+  color: var(--muted);
+  padding: .1rem .35rem .8rem;
+}
+
+.faq-item + .faq-item { margin-top: .65rem; }
 
 .links-list a {
   color: var(--accent);
@@ -122,7 +299,60 @@ li + li { margin-top: .45rem; }
   margin: .2rem 0 .7rem;
 }
 
+.pricing-card.featured {
+  outline: 2px solid color-mix(in oklab, var(--accent), transparent 65%);
+  position: relative;
+}
+
+.chip {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  margin: 0;
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.inclusions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
+}
+
+.inclusions p {
+  margin: 0;
+  border: 1px dashed var(--border);
+  border-radius: .6rem;
+  padding: .55rem .6rem;
+}
+
+.calculator label {
+  display: block;
+  margin-top: .55rem;
+}
+
+select {
+  margin-top: .25rem;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: .55rem;
+  padding: .5rem;
+  background: var(--card);
+  color: var(--text);
+}
+
+.estimate {
+  margin-top: .9rem;
+  font-size: 1.05rem;
+}
+
 @media (max-width: 980px) {
   .grid.two,
-  .grid.three { grid-template-columns: 1fr; }
+  .grid.three,
+  .stats-grid,
+  .compare-grid,
+  .inclusions { grid-template-columns: 1fr; }
 }
