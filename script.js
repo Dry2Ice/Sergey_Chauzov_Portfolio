@@ -31,17 +31,6 @@
     });
   });
 
-  const faqQuestions = document.querySelectorAll('.faq-q');
-  faqQuestions.forEach((question) => {
-    question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
-      if (!answer) return;
-      const isOpen = question.getAttribute('aria-expanded') === 'true';
-      question.setAttribute('aria-expanded', String(!isOpen));
-      answer.hidden = isOpen;
-    });
-  });
-
   const scenarioButtons = document.querySelectorAll('.scenario-btn');
   const scenarioPanels = document.querySelectorAll('.scenario-panel');
   scenarioButtons.forEach((btn) => {
@@ -78,30 +67,30 @@
     updateEstimate();
   }
 
-  const counters = document.querySelectorAll('[data-counter]');
-  if (counters.length) {
-    const observer = new IntersectionObserver((entries, obs) => {
+  const revealItems = document.querySelectorAll('.reveal');
+  if (revealItems.length) {
+    const revealObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = Number(el.dataset.counter);
-        const duration = 900;
-        const startTime = performance.now();
-
-        const tick = (now) => {
-          const progress = Math.min((now - startTime) / duration, 1);
-          const value = target * progress;
-          const hasDecimal = String(target).includes('.');
-          const suffix = el.textContent.includes('%') ? '%' : el.textContent.includes('x') ? 'x' : el.textContent.includes('+') ? '+' : el.textContent.includes('ч') ? ' ч' : '';
-          el.textContent = `${hasDecimal ? value.toFixed(1) : Math.round(value)}${suffix}`;
-          if (progress < 1) requestAnimationFrame(tick);
-        };
-
-        requestAnimationFrame(tick);
-        obs.unobserve(el);
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.12 });
 
-    counters.forEach((counter) => observer.observe(counter));
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  const cinematicHero = document.querySelector('.cinematic-hero');
+  if (cinematicHero) {
+    cinematicHero.addEventListener('mousemove', (event) => {
+      const rect = cinematicHero.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      cinematicHero.style.transform = `perspective(1000px) rotateY(${x * 3}deg) rotateX(${y * -3}deg)`;
+    });
+
+    cinematicHero.addEventListener('mouseleave', () => {
+      cinematicHero.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+    });
   }
 })();
