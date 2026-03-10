@@ -1,53 +1,34 @@
 (() => {
-  const key = 'portfolio-theme';
-  const saved = localStorage.getItem(key);
-  if (saved === 'dark') document.body.classList.add('dark');
+  const themeKey = 'portfolio-theme';
+  const langKey = 'portfolio-lang';
 
-  const button = document.getElementById('themeToggle');
-  if (button) {
-    button.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      const mode = document.body.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem(key, mode);
-    });
-  }
+  const applyTheme = (mode) => {
+    document.body.classList.toggle('dark', mode === 'dark');
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = mode === 'dark' ? '🌙' : '☀️';
+  };
 
-  const roleButtons = document.querySelectorAll('.role-btn');
-  const rolePanels = document.querySelectorAll('.role-panel');
-  roleButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const role = btn.dataset.role;
-      roleButtons.forEach((item) => {
-        const active = item.dataset.role === role;
-        item.classList.toggle('active', active);
-        item.setAttribute('aria-selected', String(active));
-      });
+  const applyLang = (lang) => {
+    document.documentElement.lang = lang;
+    const btn = document.getElementById('langToggle');
+    if (btn) btn.textContent = lang.toUpperCase();
+  };
 
-      rolePanels.forEach((panel) => {
-        const active = panel.dataset.panel === role;
-        panel.classList.toggle('active', active);
-        panel.hidden = !active;
-      });
-    });
+  applyTheme(localStorage.getItem(themeKey) || 'light');
+  applyLang(localStorage.getItem(langKey) || 'ru');
+
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const mode = document.body.classList.contains('dark') ? 'light' : 'dark';
+    localStorage.setItem(themeKey, mode);
+    applyTheme(mode);
   });
 
-  const scenarioButtons = document.querySelectorAll('.scenario-btn');
-  const scenarioPanels = document.querySelectorAll('.scenario-panel');
-  scenarioButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const scenario = btn.dataset.scenario;
-      scenarioButtons.forEach((item) => {
-        item.classList.toggle('active', item.dataset.scenario === scenario);
-      });
-      scenarioPanels.forEach((panel) => {
-        const isCurrent = panel.dataset.scenarioPanel === scenario;
-        panel.classList.toggle('active', isCurrent);
-        panel.hidden = !isCurrent;
-      });
-    });
+  document.getElementById('langToggle')?.addEventListener('click', () => {
+    const current = (localStorage.getItem(langKey) || 'ru') === 'ru' ? 'en' : 'ru';
+    localStorage.setItem(langKey, current);
+    applyLang(current);
   });
 
-  const projectType = document.getElementById('projectType');
   const projectTypeOptions = document.querySelectorAll('input[name="projectType"]');
   const typeCards = document.querySelectorAll('.type-card');
   const addOns = document.querySelectorAll('.calc-addon');
@@ -60,134 +41,47 @@
   const pageCountOutput = document.getElementById('pageCountOutput');
   const deadline = document.getElementById('deadline');
   const deadlineOutput = document.getElementById('deadlineOutput');
-  const designSegments = document.querySelectorAll('#designLevel .segment');
-  let designMultiplier = 1;
-  let designLabel = 'Стандарт';
 
   const formatRub = (value) => `${Number(value).toLocaleString('ru-RU')} ₽`;
-
-  const getBaseValue = () => {
-    if (projectType) return Number(projectType.value);
-    const selected = Array.from(projectTypeOptions).find((item) => item.checked);
-    return Number(selected?.value || 0);
-  };
-
-  const getProjectLabel = () => {
-    if (projectType) return projectType.options[projectType.selectedIndex]?.textContent || 'Проект';
-    const selected = Array.from(projectTypeOptions).find((item) => item.checked);
-    return selected?.dataset.label || 'Проект';
-  };
+  const getBaseValue = () => Number(Array.from(projectTypeOptions).find((item) => item.checked)?.value || 0);
 
   const updateEstimate = () => {
     if (!estimateValue) return;
-
     const base = getBaseValue();
     const pages = pageCount ? Number(pageCount.value) : 6;
     const deadlineWeeks = deadline ? Number(deadline.value) : 5;
     const pageExtra = Math.max(0, pages - 5) * 1200;
-
-    let addonsTotal = 0;
-    const addonItems = [];
-    addOns.forEach((addon) => {
-      if (addon.checked) {
-        const addonValue = Number(addon.value);
-        addonsTotal += addonValue;
-        addonItems.push(`${addon.dataset.label}: ${formatRub(addonValue)}`);
-      }
-    });
-
+    const addonsTotal = Array.from(addOns).filter((a) => a.checked).reduce((sum, item) => sum + Number(item.value), 0);
     const urgentMultiplier = deadlineWeeks <= 3 ? 1.25 : deadlineWeeks <= 5 ? 1.1 : 1;
-    const subtotal = (base + pageExtra + addonsTotal) * designMultiplier;
-    const total = Math.round(subtotal * urgentMultiplier / 1000) * 1000;
+    const total = Math.round((base + pageExtra + addonsTotal) * urgentMultiplier / 1000) * 1000;
 
     estimateValue.textContent = formatRub(total);
-
     if (pageCountOutput) pageCountOutput.value = String(pages);
-    if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${deadlineWeeks < 5 ? 'недели' : 'недель'}`;
+    if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} недель`;
+    if (estimateTimeline) estimateTimeline.textContent = `${Math.max(2, Math.round(pages / 3))}–${Math.max(4, Math.round(pages / 2))} недель`;
 
-    const timelineMin = Math.max(2, Math.round((pages / 3) + addonItems.length / 2));
-    const timelineMax = Math.max(timelineMin + 1, timelineMin + (deadlineWeeks <= 4 ? 0 : 2));
-    if (estimateTimeline) estimateTimeline.textContent = `${timelineMin}–${timelineMax} недель`;
-
-    const complexityScore = Math.min(100, Math.round((base / 1300) + pages * 1.8 + addonsTotal / 1800 + (designMultiplier - 1) * 32 + (urgentMultiplier - 1) * 40));
-    const complexityText = complexityScore < 38 ? 'Базовый' : complexityScore < 68 ? 'Средний' : 'Высокий';
-
-    if (complexityValue) complexityValue.textContent = `${complexityText} (${complexityScore}/100)`;
-    if (complexityMeter) complexityMeter.style.width = `${complexityScore}%`;
-
-    if (estimateBreakdown) {
-      const breakdown = [
-        `Тип проекта «${getProjectLabel()}»: ${formatRub(base)}`,
-        `Масштаб (${pages} стр.): ${formatRub(pageExtra)}`,
-        `Уровень дизайна (${designLabel}): ×${designMultiplier}`,
-        `Надбавка за срок: ×${urgentMultiplier}`,
-      ];
-      estimateBreakdown.innerHTML = '';
-      [...breakdown, ...addonItems].forEach((line) => {
-        const li = document.createElement('li');
-        li.textContent = line;
-        estimateBreakdown.appendChild(li);
-      });
-      if (!addonItems.length) {
-        const li = document.createElement('li');
-        li.textContent = 'Доп. опции пока не выбраны';
-        estimateBreakdown.appendChild(li);
-      }
-    }
+    const complexity = Math.min(100, Math.round(base / 1500 + pages * 2 + addonsTotal / 1800));
+    if (complexityValue) complexityValue.textContent = complexity < 40 ? 'Базовый' : complexity < 70 ? 'Средний' : 'Высокий';
+    if (complexityMeter) complexityMeter.style.width = `${complexity}%`;
+    if (estimateBreakdown) estimateBreakdown.innerHTML = `<li>База: ${formatRub(base)}</li><li>Масштаб: ${formatRub(pageExtra)}</li><li>Опции: ${formatRub(addonsTotal)}</li>`;
   };
 
-  if ((projectType || projectTypeOptions.length) && estimateValue) {
-    projectType?.addEventListener('change', updateEstimate);
-    projectTypeOptions.forEach((option) => {
-      option.addEventListener('change', () => {
-        typeCards.forEach((card) => {
-          const input = card.querySelector('input');
-          card.classList.toggle('active', Boolean(input?.checked));
-        });
-        updateEstimate();
-      });
-    });
-    addOns.forEach((addon) => addon.addEventListener('change', updateEstimate));
-    pageCount?.addEventListener('input', updateEstimate);
-    deadline?.addEventListener('input', updateEstimate);
-
-    designSegments.forEach((segment) => {
-      segment.addEventListener('click', () => {
-        designSegments.forEach((item) => item.classList.remove('active'));
-        segment.classList.add('active');
-        designMultiplier = Number(segment.dataset.multiplier || '1');
-        designLabel = segment.dataset.label || 'Стандарт';
-        updateEstimate();
-      });
-    });
-
+  projectTypeOptions.forEach((option) => option.addEventListener('change', () => {
+    typeCards.forEach((card) => card.classList.toggle('active', Boolean(card.querySelector('input')?.checked)));
     updateEstimate();
-  }
+  }));
+  addOns.forEach((addon) => addon.addEventListener('change', updateEstimate));
+  pageCount?.addEventListener('input', updateEstimate);
+  deadline?.addEventListener('input', updateEstimate);
+  updateEstimate();
 
   const revealItems = document.querySelectorAll('.reveal');
-  if (revealItems.length) {
-    const revealObserver = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      });
-    }, { threshold: 0.12 });
-
-    revealItems.forEach((item) => revealObserver.observe(item));
-  }
-
-  const cinematicHero = document.querySelector('.cinematic-hero');
-  if (cinematicHero) {
-    cinematicHero.addEventListener('mousemove', (event) => {
-      const rect = cinematicHero.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      cinematicHero.style.transform = `perspective(1000px) rotateY(${x * 3}deg) rotateX(${y * -3}deg)`;
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      obs.unobserve(entry.target);
     });
-
-    cinematicHero.addEventListener('mouseleave', () => {
-      cinematicHero.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-    });
-  }
+  }, { threshold: 0.12 });
+  revealItems.forEach((item) => revealObserver.observe(item));
 })();

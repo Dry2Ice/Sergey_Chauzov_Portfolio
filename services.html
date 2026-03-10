@@ -4,70 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sergey Chauzov — Возможности</title>
+  <meta name="description" content="Технологии, функции и преимущества сайтов: UX, интеграции, SEO, производительность и безопасность." />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="header">
-    <div class="container nav-wrap">
-      <a class="brand" href="presentation.html">Sergey Chauzov</a>
-      <nav class="nav">
-        <a class="nav-link" href="presentation.html">Презентация</a>
-        <a class="nav-link" href="index.html">Главная</a>
-        <a class="nav-link active" href="services.html">Возможности</a>
-        <a class="nav-link" href="example.html">Прайс и кейс</a>
-      </nav>
-      <div class="header-right">
-        <img class="small-logo" src="smalllogo.svg" alt="Логотип Sergey Chauzov" />
-        <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
-      </div>
+    <div class="container topbar">
+      <button id="langToggle" class="control-btn" aria-label="Переключить язык">RU</button>
+      <nav class="nav"><a class="nav-link" href="development.html">Разработка</a><a class="nav-link active" href="services.html">Возможности</a></nav>
+      <a class="center-logo" href="index.html" aria-label="На главную"><img src="smalllogo.svg" class="small-logo" alt="Логотип" /></a>
+      <nav class="nav"><a class="nav-link" href="pricing.html">Прайс</a><a class="nav-link" href="info.html">Инфо</a></nav>
+      <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
 
   <main>
-    <section class="hero container reveal">
-      <p class="badge">Продуктовый подход + визуальная выразительность</p>
-      <h1>Функционал, который красиво выглядит и помогает бизнесу в реальной работе</h1>
-      <p>Собрал базовый и расширенный набор возможностей, которые можно подключать поэтапно.</p>
+    <section class="container hero reveal">
+      <p class="badge">Технологическая база</p>
+      <h1>Возможности, которые делают сайт инструментом продаж, а не просто красивой страницей</h1>
     </section>
-
     <section class="container grid three">
-      <article class="card reveal">
-        <h2>UI / UX</h2>
-        <ul>
-          <li>Адаптивный дизайн под смартфоны, ноутбуки и широкие экраны.</li>
-          <li>Микро-анимации и презентационные блоки.</li>
-          <li>Темная и светлая тема, акценты на CTA.</li>
-          <li>Логичная структура для быстрого восприятия.</li>
-        </ul>
-      </article>
-      <article class="card reveal">
-        <h2>Интеграции</h2>
-        <ul>
-          <li>Формы, Telegram/email-уведомления, CRM.</li>
-          <li>События аналитики и отслеживание лидов.</li>
-          <li>Квиз, калькулятор, автосообщения.</li>
-          <li>Подготовка к подключению новых сервисов.</li>
-        </ul>
-      </article>
-      <article class="card reveal">
-        <h2>Надёжность</h2>
-        <ul>
-          <li>Оптимизация скорости загрузки и Core Web Vitals.</li>
-          <li>Базовая защита форм и данных.</li>
-          <li>Чистая структура проекта для поддержки.</li>
-          <li>План развития после первой версии сайта.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="container card reveal">
-      <h2>Технологический стек</h2>
-      <div class="tags">
-        <span>HTML/CSS/JS</span><span>React</span><span>Next.js</span><span>TypeScript</span>
-        <span>Node.js</span><span>Python</span><span>PostgreSQL</span><span>Docker</span>
-        <span>Nginx</span><span>SEO</span><span>Analytics</span><span>CRM</span>
-      </div>
+      <article class="card reveal"><h2>UX и визуал</h2><ul><li>Адаптивный интерфейс под все устройства.</li><li>Дизайн-система и единый стиль бренда.</li><li>Микроанимации и акцентные CTA.</li></ul></article>
+      <article class="card reveal"><h2>Функции и интеграции</h2><ul><li>Формы с отправкой в Telegram/email/CRM.</li><li>Калькуляторы, квизы, динамические блоки.</li><li>Подключение аналитики и событий.</li></ul></article>
+      <article class="card reveal"><h2>Качество и SEO</h2><ul><li>Семантическая верстка и metadata.</li><li>Оптимизация Core Web Vitals.</li><li>Техническая подготовка к продвижению.</li></ul></article>
     </section>
   </main>
 </body>

@@ -3,102 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sergey Chauzov — Главная</title>
+  <title>Sergey Chauzov — Премиальная разработка сайтов</title>
+  <meta name="description" content="Создаю быстрые и эстетичные сайты под задачи бизнеса: стратегия, дизайн, разработка, поддержка и рост конверсии." />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="header">
-    <div class="container nav-wrap nav-wrap-centered">
-      <nav class="nav nav-left" aria-label="Основная навигация слева">
-        <a class="nav-link active" href="index.html">Главная</a>
-        <a class="nav-link" href="presentation.html">Презентация</a>
-      </nav>
-
-      <a class="center-logo" href="index.html" aria-label="Главный раздел Sergey Chauzov">
-        <svg class="brand-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Sergey Chauzov">
-          <defs>
-            <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00d1c9"/>
-              <stop offset="55%" stop-color="#0089ad"/>
-              <stop offset="100%" stop-color="#24246e"/>
-            </linearGradient>
-          </defs>
-          <circle cx="60" cy="60" r="56" fill="url(#brandGradient)" />
-          <text x="60" y="72" text-anchor="middle" fill="#f8ffff" font-size="40" font-family="Manrope, sans-serif" font-weight="700">SC</text>
-        </svg>
-      </a>
-
-      <nav class="nav nav-right" aria-label="Основная навигация справа">
+    <div class="container topbar">
+      <button id="langToggle" class="control-btn" aria-label="Переключить язык">RU</button>
+      <nav class="nav" aria-label="Разделы слева">
+        <a class="nav-link" href="development.html">Разработка</a>
         <a class="nav-link" href="services.html">Возможности</a>
-        <a class="nav-link" href="example.html">Прайс и кейс</a>
       </nav>
-
-      <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
+      <a class="center-logo" href="index.html" aria-label="На главную">
+        <img src="smalllogo.svg" class="small-logo" alt="Логотип Sergey Chauzov" />
+      </a>
+      <nav class="nav" aria-label="Разделы справа">
+        <a class="nav-link" href="pricing.html">Прайс</a>
+        <a class="nav-link" href="info.html">Инфо</a>
+      </nav>
+      <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
 
   <main>
-    <section class="hero hero-lux container reveal">
-      <svg class="hero-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Большой логотип Sergey Chauzov">
-        <defs>
-          <linearGradient id="heroBrandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#00d1c9"/>
-            <stop offset="50%" stop-color="#0089ad"/>
-            <stop offset="100%" stop-color="#24246e"/>
-          </linearGradient>
-        </defs>
-        <circle cx="60" cy="60" r="56" fill="url(#heroBrandGradient)" />
-        <text x="60" y="72" text-anchor="middle" fill="#f8ffff" font-size="40" font-family="Manrope, sans-serif" font-weight="700">SC</text>
-      </svg>
-      <p class="badge">Premium Web Experience • Дизайн, который продаёт • Код, который масштабируется</p>
-      <h1>Цифровой лендинг-путь: от сильного первого экрана до конверсии и долгосрочного роста</h1>
-      <p>
-        Главная страница ведёт пользователя через ключевые аспекты: позиционирование бренда, возможности разработки,
-        экономику проекта и реальные примеры. На каждом шаге — быстрые переходы в профильные разделы, где можно изучить
-        детали глубже и принять решение на фактах.
-      </p>
+    <section class="container hero reveal">
+      <p class="badge">Web Product Design • Development • Support</p>
+      <h1>Сайты, которым доверяют: эстетика, результат и честная стоимость</h1>
+      <p>Я проектирую и запускаю сайты как полноценные цифровые продукты: с понятной стратегией, точной подачей бренда и измеримой эффективностью. Вся структура портфолио разделена на 5 логичных разделов, чтобы клиент быстро увидел ценность и принял решение.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="services.html">Изучить возможности</a>
-        <a class="btn" href="example.html">Смотреть прайс и кейс</a>
+        <a class="btn btn-primary" href="pricing.html">Рассчитать стоимость</a>
+        <a class="btn" href="development.html">Как проходит разработка</a>
       </div>
     </section>
 
-    <section class="container grid two">
+    <section class="container grid three">
       <article class="card reveal">
-        <h2>1. Позиционирование и подача</h2>
-        <p>Формируем визуальный образ и архитектуру смыслов, чтобы клиент понимал ценность услуги за первые 10 секунд.</p>
-        <a class="showcase-link" href="presentation.html">
-          <span>Перейти в раздел «Презентация»</span>
-          <strong>Открыть →</strong>
-        </a>
+        <h2>Готовые проекты</h2>
+        <p>Реальные сайты с живым трафиком и бизнес-задачами. Каждый проект можно разобрать по этапам и метрикам.</p>
+        <a class="showcase-link" href="https://aplus-charisma.ru/" target="_blank" rel="noopener noreferrer"><span>Aplus Charisma</span><strong>Открыть ↗</strong></a>
       </article>
       <article class="card reveal">
-        <h2>2. Функциональные возможности</h2>
-        <p>Определяем стек, сценарии взаимодействия и интеграции, чтобы сайт работал не только красиво, но и эффективно.</p>
-        <a class="showcase-link" href="services.html">
-          <span>Перейти в раздел «Возможности»</span>
-          <strong>Открыть →</strong>
-        </a>
+        <h2>Что вы получаете</h2>
+        <ul>
+          <li>Современный визуальный уровень.</li>
+          <li>Быструю загрузку и SEO-основу.</li>
+          <li>Прозрачные этапы и контроль сроков.</li>
+        </ul>
+      </article>
+      <article class="card reveal stats">
+        <h2>Факты, которые формируют доверие</h2>
+        <p><strong>90+</strong> по Lighthouse при корректном контенте.</p>
+        <p><strong>24–72 часа</strong> на первую рабочую итерацию.</p>
+        <p><strong>1 окно связи</strong> — без менеджерской прослойки.</p>
       </article>
     </section>
 
     <section class="container grid two">
       <article class="card reveal">
-        <h2>3. Прозрачная экономика проекта</h2>
-        <p>Стоимость и сроки считаются логично: этапы понятны, риски управляемы, результат прогнозируем.</p>
-        <a class="showcase-link" href="example.html">
-          <span>Открыть прайс и кейс</span>
-          <strong>Открыть →</strong>
-        </a>
+        <h2>Что будет улучшаться дальше</h2>
+        <ul>
+          <li>Публикация кейсов в формате «задача → решение → результат».</li>
+          <li>Добавление видео-разбора процесса и отзывов клиентов.</li>
+          <li>Расширение англоязычной версии для международных заказов.</li>
+        </ul>
       </article>
-      <article class="card reveal qr-contact-card">
-        <h2>4. Быстрый контакт через Telegram</h2>
-        <p>Нужна консультация или обсуждение задачи? Отсканируйте QR или нажмите на него для перехода в чат.</p>
-        <a class="qr-link" href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram @SC_WebDev">
-          <img src="telegram-qr.svg" alt="QR-код для перехода в Telegram @SC_WebDev" />
-          <span>@SC_WebDev</span>
-        </a>
+      <article class="card reveal">
+        <h2>SEO-качество на старте</h2>
+        <ul>
+          <li>Чёткая иерархия заголовков и семантические блоки.</li>
+          <li>Meta description на всех ключевых страницах.</li>
+          <li>Подготовка к schema.org и Open Graph в следующем спринте.</li>
+        </ul>
       </article>
     </section>
   </main>
