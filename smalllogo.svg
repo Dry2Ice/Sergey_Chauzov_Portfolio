@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 178">
+  <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#_Безымянный_градиент_4);
+      }
+
+      .st1 {
+        fill: url(#_Безымянный_градиент_5);
+      }
+
+      .st2 {
+        fill: url(#_Безымянный_градиент_7);
+      }
+
+      .st3 {
+        fill: url(#_Безымянный_градиент_2);
+      }
+
+      .st4 {
+        fill: url(#_Безымянный_градиент);
+      }
+
+      .st5 {
+        fill: url(#_Безымянный_градиент_8);
+      }
+
+      .st6 {
+        fill: url(#_Безымянный_градиент_3);
+      }
+
+      .st7 {
+        fill: url(#_Безымянный_градиент_6);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент" data-name="Безымянный градиент" x1="55.58" y1="705.52" x2="190.18" y2="705.52" gradientTransform="translate(0 -664)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#24246e"/>
+      <stop offset=".51" stop-color="#004b8d"/>
+      <stop offset="1" stop-color="#008bae"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_2" data-name="Безымянный градиент 2" x1="55.52" y1="744.32" x2="120.19" y2="744.32" gradientTransform="translate(0 -664)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#24246e"/>
+      <stop offset=".51" stop-color="#004389"/>
+      <stop offset="1" stop-color="#003371"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_3" data-name="Безымянный градиент 3" x1="38.38" y1="752.78" x2="189.99" y2="752.78" gradientTransform="translate(0 -664)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00549e"/>
+      <stop offset=".51" stop-color="#00d1c9"/>
+      <stop offset="1" stop-color="#008bae"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_4" data-name="Безымянный градиент 4" x1="130.29" y1="792.99" x2="189.89" y2="792.99" gradientTransform="translate(0 -664)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0082a8"/>
+      <stop offset=".51" stop-color="#00d1c9"/>
+      <stop offset="1" stop-color="#00d1c9"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_5" data-name="Безымянный градиент 5" x1="55.79" y1="788.33" x2="130.13" y2="788.33" gradientTransform="translate(0 -664)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00669a"/>
+      <stop offset=".51" stop-color="#008bae"/>
+      <stop offset="1" stop-color="#0093ae"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_6" data-name="Безымянный градиент 6" x1="147.35" y1="797.48" x2="157.75" y2="797.48" gradientTransform="translate(14.66 -623.02) rotate(2.34) scale(1 .9)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ccc"/>
+      <stop offset="1" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_7" data-name="Безымянный градиент 7" x1="163.28" y1="774.31" x2="172.68" y2="774.31" gradientTransform="translate(3.5 -651.75) rotate(.52) scale(1 .97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ccc"/>
+      <stop offset="1" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_8" data-name="Безымянный градиент 8" x1="150.08" y1="761.66" x2="162.98" y2="761.66" gradientTransform="translate(5.71 -663.77) rotate(.82)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ccc"/>
+      <stop offset="1" stop-color="#707070"/>
+    </linearGradient>
+  </defs>
+  <path class="st4" d="M183.09,32.87H62.19c-4.94,0-6.61,6.04-6.61,8.01v9.3h134.6v-9.39c0-4.61-3.38-7.92-7.12-7.92h.03,0ZM154.68,43.73h-6.74c-1.44,0-2.16-.77-2.16-2.1,0-1.2.72-2.01,2.16-2.01h6.74c1.33,0,1.9.81,1.9,2.01,0,1.26-.57,2.1-1.9,2.1ZM168.61,45.58h-5.38c-1.33,0-1.83-.78-1.83-2.1v-3.78c0-1.42.5-2.19,1.83-2.19h4.95c1.33,0,1.83.77,1.83,2.11v3.86c0,1.32-.5,2.1-1.4,2.1ZM178.61,45.99c-3.45,0-3.95-3.35-3.95-4.36,0-2.05,1.67-4.49,4.2-4.49,2.81,0,4.14,2.44,4.14,4.49s-1.75,4.36-4.39,4.36Z"/>
+  <path class="st3" d="M120.19,55.36v16.88c0,.62-.41,1.16-1.03,1.16h-39.21c-5.22,0-7.29,3.18-7.29,7.18,0,3.43,2.24,6.36,6.61,7.4l20.27,4.52c-5.7,5.64-12.61,10.65-17.83,12.8l-8.19-2.6c-10.74-3.01-18-10.89-18-21.79,0-13.28,10.16-25.55,26.02-25.55,0,0,38.65,0,38.65,0Z"/>
+  <path class="st6" d="M189.99,55.36v18.21h-27.98c-16.95,0-28.19,12.52-42.35,27.04-12.82,13.28-25.95,21.85-43.97,21.6-14.83-.25-25.41-4.03-37.31-16.3,7.94,6.92,18.26,8.6,26.37,7.73,19.01-2.15,31.41-12.11,42.74-23.95,14.75-15.67,25.99-34.33,50.83-34.33,0,0,31.67,0,31.67,0Z"/>
+  <path class="st0" d="M189.89,129.3v8.74c0,3.92-3.18,7.1-7.1,7.1h-26.11c-9.9,0-19.3-3.44-26.39-10.52,3.94-6.12,5.01-14.08,3.34-21.71,1.75-.33,2.91.89,3.66,3.12,3.37,8.65,9.49,13.02,20.98,13.02l31.62.25h0Z"/>
+  <path class="st1" d="M122.29,103.62c6.21,5.47,8.2,13.19,7.36,20.9-1.74,11.76-11.64,20.53-26.05,20.53h-40.71c-3.92,0-7.1-3.18-7.1-7.1v-9.15h48.8c6.12,0,7.7-4.85,7.7-7.29s-.74-4.28-2.65-5.81c4.45-3.37,8.81-7.65,12.65-12.08h0Z"/>
+  <g>
+    <path class="st7" d="M140.79,92.88l-7.43,5.99c-1.03.84-1.06,1.72-.11,2.64l6.84,6.49c.87.86,3.07-.17,2.23-1.65l-4.99-5.55.02-.37,4.9-4.56c1.12-1.23.34-4.05-1.46-2.98h0Z"/>
+    <path class="st2" d="M162.06,93.16c-.27-.24-1.07-.29-1.33-.04-.61.6-.74,1.34-.02,2.24l5.41,5.41v.4l-5.92,5.22c-.91,1.36,1.23,3,2.74,1.9l5.92-5.53c.99-.94.92-2.49-.14-3.37l-6.67-6.21v-.02Z"/>
+    <path class="st5" d="M156.34,88.38h-.33c-.99-.02-1.5.57-1.94,1.74l-9.1,19.98c-.6,1.41.8,1.85,1.88,1.54h.34c.9.02,1.41-.96,1.85-2.02l8.55-18.63c.68-1.33.45-2.58-1.25-2.61Z"/>
+  </g>
+</svg>
