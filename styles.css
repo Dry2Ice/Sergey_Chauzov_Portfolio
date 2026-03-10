@@ -48,6 +48,33 @@ body {
 
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; gap: .8rem; }
 
+.nav-wrap-centered {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto;
+  align-items: center;
+  gap: .85rem;
+}
+
+.nav-left { justify-content: flex-end; }
+
+.nav-right { justify-content: flex-start; }
+
+.center-logo {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 14px rgba(0, 137, 173, .34));
+  transition: transform .2s ease;
+}
+
+.center-logo:hover .brand-mark { transform: translateY(-2px); }
+
 .header-right { display: flex; align-items: center; gap: .55rem; }
 .small-logo {
   width: 30px;
@@ -102,6 +129,21 @@ body {
 }
 
 .hero { padding: 3.4rem 0 1.2rem; }
+.hero-lux {
+  text-align: center;
+  padding-top: 4.5rem;
+  max-width: 980px;
+}
+
+.hero-lux .hero-logo { margin: 0 auto 1.1rem; }
+
+.hero-lux p {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-lux .cta-row { justify-content: center; }
+
 .badge { color: color-mix(in oklab, var(--accent-3), #fff 28%); font-weight: 700; margin: 0 0 .35rem; }
 h1 { font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.08; margin: .2rem 0 .8rem; }
 h2 { margin-top: .15rem; }
@@ -335,6 +377,33 @@ input[type='range'] {
 }
 .showcase-link strong { color: #9ec2ff; }
 
+.qr-contact-card {
+  background: linear-gradient(140deg, rgba(101, 129, 255, .18), rgba(0, 209, 201, .14));
+}
+
+.qr-link {
+  margin-top: .7rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: .4rem;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.qr-link img {
+  width: min(220px, 100%);
+  border-radius: .8rem;
+  border: 1px solid color-mix(in oklab, var(--accent-3), transparent 28%);
+  background: #fff;
+  padding: .55rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .2);
+  transition: transform .22s ease;
+}
+
+.qr-link:hover img { transform: translateY(-3px) scale(1.01); }
+
 /* cinematic page */
 .cinematic-hero {
   position: relative;
@@ -422,4 +491,11 @@ li + li { margin-top: .4rem; }
   .calc-summary { position: static; }
   .small-logo { width: 26px; height: 26px; }
   .hero-logo { margin-inline: auto; }
+  .nav-wrap-centered {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: .8rem 0 1rem;
+  }
+  .nav-left,
+  .nav-right { justify-content: center; }
 }

@@ -9,70 +9,97 @@
 </head>
 <body>
   <header class="header">
-    <div class="container nav-wrap">
-      <a class="brand" href="presentation.html">Sergey Chauzov</a>
-      <nav class="nav">
-        <a class="nav-link" href="presentation.html">Презентация</a>
+    <div class="container nav-wrap nav-wrap-centered">
+      <nav class="nav nav-left" aria-label="Основная навигация слева">
         <a class="nav-link active" href="index.html">Главная</a>
+        <a class="nav-link" href="presentation.html">Презентация</a>
+      </nav>
+
+      <a class="center-logo" href="index.html" aria-label="Главный раздел Sergey Chauzov">
+        <svg class="brand-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Sergey Chauzov">
+          <defs>
+            <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00d1c9"/>
+              <stop offset="55%" stop-color="#0089ad"/>
+              <stop offset="100%" stop-color="#24246e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="56" fill="url(#brandGradient)" />
+          <text x="60" y="72" text-anchor="middle" fill="#f8ffff" font-size="40" font-family="Manrope, sans-serif" font-weight="700">SC</text>
+        </svg>
+      </a>
+
+      <nav class="nav nav-right" aria-label="Основная навигация справа">
         <a class="nav-link" href="services.html">Возможности</a>
         <a class="nav-link" href="example.html">Прайс и кейс</a>
       </nav>
-      <div class="header-right">
-        <img class="small-logo" src="smalllogo.svg" alt="Логотип Sergey Chauzov" />
-        <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
-      </div>
+
+      <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
     </div>
   </header>
 
   <main>
-    <section class="hero container reveal">
-      <img class="hero-logo" src="logo.svg" alt="Logo Sergey Chauzov" />
-      <p class="badge">Начинающий создатель сайтов • современная подача • доступный старт</p>
-      <h1>Делаю сайты в стиле больших брендов, сохраняя стоимость доступной для малого бизнеса</h1>
+    <section class="hero hero-lux container reveal">
+      <svg class="hero-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Большой логотип Sergey Chauzov">
+        <defs>
+          <linearGradient id="heroBrandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d1c9"/>
+            <stop offset="50%" stop-color="#0089ad"/>
+            <stop offset="100%" stop-color="#24246e"/>
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="56" fill="url(#heroBrandGradient)" />
+        <text x="60" y="72" text-anchor="middle" fill="#f8ffff" font-size="40" font-family="Manrope, sans-serif" font-weight="700">SC</text>
+      </svg>
+      <p class="badge">Premium Web Experience • Дизайн, который продаёт • Код, который масштабируется</p>
+      <h1>Цифровой лендинг-путь: от сильного первого экрана до конверсии и долгосрочного роста</h1>
       <p>
-        Я вышел в активную практику после этапа интенсивного обучения и прототипирования.
-        Сейчас моя главная задача — применять накопленные навыки в реальных проектах и делать
-        качественную веб-разработку доступнее, чем обычно на рынке.
+        Главная страница ведёт пользователя через ключевые аспекты: позиционирование бренда, возможности разработки,
+        экономику проекта и реальные примеры. На каждом шаге — быстрые переходы в профильные разделы, где можно изучить
+        детали глубже и принять решение на фактах.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="example.html">Тарифы и калькулятор</a>
-        <a class="btn" href="services.html">Что входит в работу</a>
+        <a class="btn btn-primary" href="services.html">Изучить возможности</a>
+        <a class="btn" href="example.html">Смотреть прайс и кейс</a>
       </div>
     </section>
 
     <section class="container grid two">
       <article class="card reveal">
-        <h2>Как я веду проект</h2>
-        <ul>
-          <li>Обсуждаем задачу простым языком и фиксируем цель проекта.</li>
-          <li>Создаю структуру и прототип, чтобы заранее согласовать логику.</li>
-          <li>Собираю современный дизайн и адаптивную вёрстку.</li>
-          <li>Подключаю формы, аналитику и запуск на хостинге.</li>
-        </ul>
+        <h2>1. Позиционирование и подача</h2>
+        <p>Формируем визуальный образ и архитектуру смыслов, чтобы клиент понимал ценность услуги за первые 10 секунд.</p>
+        <a class="showcase-link" href="presentation.html">
+          <span>Перейти в раздел «Презентация»</span>
+          <strong>Открыть →</strong>
+        </a>
       </article>
       <article class="card reveal">
-        <h2>Почему со мной удобно</h2>
-        <ul>
-          <li>Прозрачные этапы без перегруза терминологией.</li>
-          <li>Умеренные сроки и бережная коммуникация.</li>
-          <li>Структура сайта с запасом для дальнейшего роста.</li>
-          <li>Поддержка после релиза и рекомендации по улучшению.</li>
-        </ul>
+        <h2>2. Функциональные возможности</h2>
+        <p>Определяем стек, сценарии взаимодействия и интеграции, чтобы сайт работал не только красиво, но и эффективно.</p>
+        <a class="showcase-link" href="services.html">
+          <span>Перейти в раздел «Возможности»</span>
+          <strong>Открыть →</strong>
+        </a>
       </article>
     </section>
 
-    <section class="container card reveal">
-      <h2>Формат подачи под разные роли</h2>
-      <div class="role-switch" role="tablist" aria-label="Режим просмотра">
-        <button class="role-btn active" data-role="business" role="tab" aria-selected="true">Я заказчик</button>
-        <button class="role-btn" data-role="dev" role="tab" aria-selected="false">Я разработчик</button>
-      </div>
-      <div class="role-panel active" data-panel="business">
-        <p>Покажу, как сайт поможет получать обращения и выглядеть убедительно для аудитории.</p>
-      </div>
-      <div class="role-panel" data-panel="dev" hidden>
-        <p>Расскажу про стек, архитектуру, производительность и поддержку после релиза.</p>
-      </div>
+    <section class="container grid two">
+      <article class="card reveal">
+        <h2>3. Прозрачная экономика проекта</h2>
+        <p>Стоимость и сроки считаются логично: этапы понятны, риски управляемы, результат прогнозируем.</p>
+        <a class="showcase-link" href="example.html">
+          <span>Открыть прайс и кейс</span>
+          <strong>Открыть →</strong>
+        </a>
+      </article>
+      <article class="card reveal qr-contact-card">
+        <h2>4. Быстрый контакт через Telegram</h2>
+        <p>Нужна консультация или обсуждение задачи? Отсканируйте QR или нажмите на него для перехода в чат.</p>
+        <a class="qr-link" href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram @SC_WebDev">
+          <img src="telegram-qr.svg" alt="QR-код для перехода в Telegram @SC_WebDev" />
+          <span>@SC_WebDev</span>
+        </a>
+      </article>
     </section>
   </main>
 </body>
