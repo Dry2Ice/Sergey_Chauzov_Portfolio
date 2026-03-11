@@ -55,6 +55,7 @@
         resultTitle: 'Что вы получаете в результате',
         resultLi1: 'Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.', resultLi2: 'Семантически корректный HTML и SEO-базу с подготовкой к schema.org.',
         resultLi3: 'Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.', resultLi4: 'Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.',
+        marqueeTitle: 'Стек и стандарты', marqueeLead: 'Подход и качество вдохновлены digital-практиками лидеров рынка.',
         finalTitle: 'Готовы сделать сайт центром роста вашего бизнеса?', finalLead: 'Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.',
         finalCta1: 'Запустить проект', finalCta2: 'Связаться напрямую', footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
@@ -75,6 +76,7 @@
         resultTitle: 'What You Get',
         resultLi1: 'Premium visual quality with clear hierarchy and conversion-oriented CTA flow.', resultLi2: 'Semantic HTML foundation with SEO readiness and schema.org preparation.',
         resultLi3: 'Performance optimization so design never harms conversion or indexing.', resultLi4: 'Scalable structure for case studies, content, and multilingual growth.',
+        marqueeTitle: 'Stack & standards', marqueeLead: 'The approach is inspired by digital execution patterns of market-leading brands.',
         finalTitle: 'Ready to make your website a growth engine?', finalLead: 'Next step: a focused brief, KPI alignment, and the first working version within days.',
         finalCta1: 'Start project', finalCta2: 'Contact directly', footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
       }
@@ -241,6 +243,25 @@
 
   const getBaseValue = () => Number(Array.from(projectTypeOptions).find((item) => item.checked)?.value || 0);
 
+  function animateEstimateValue(node, from, to, lang) {
+    if (!node) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || Math.abs(to - from) < 1000) {
+      node.textContent = formatCurrency(to, lang);
+      return;
+    }
+    const start = performance.now();
+    const duration = 420;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - ((1 - p) ** 3);
+      const val = Math.round(from + (to - from) * eased);
+      node.textContent = formatCurrency(val, lang);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
   function updateEstimate(lang = safeGet(langKey, 'ru')) {
     const estimateValue = document.getElementById('estimateValue');
     const estimateTimeline = document.getElementById('estimateTimeline');
@@ -262,7 +283,9 @@
     const subtotal = base + pageExtra + designCost + seoCost + addonsTotal;
     const total = Math.round(subtotal * urgency / 1000) * 1000;
 
-    estimateValue.textContent = formatCurrency(total, lang);
+    const prev = Number((estimateValue.dataset.value || '0'));
+    estimateValue.dataset.value = String(total);
+    animateEstimateValue(estimateValue, prev, total, lang);
     if (pageCountOutput) pageCountOutput.value = String(pages);
     if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${lang === 'en' ? 'weeks' : 'недель'}`;
     const minTimeline = Math.max(2, Math.round(pages / 4) + (designCost > 0 ? 1 : 0));
@@ -322,4 +345,46 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach((item) => revealObserver.observe(item));
+
+  const initMotionSystem = () => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const progress = document.createElement('div');
+    progress.className = 'scroll-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.append(progress);
+
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = `${Math.min(100, Math.max(0, ratio))}%`;
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    if (reduced || window.matchMedia('(max-width: 980px)').matches) return;
+
+    document.querySelectorAll('.card, .kpi').forEach((item) => {
+      item.addEventListener('mousemove', (e) => {
+        const r = item.getBoundingClientRect();
+        const rx = ((e.clientY - r.top) / r.height - 0.5) * -5;
+        const ry = ((e.clientX - r.left) / r.width - 0.5) * 6;
+        item.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = '';
+      });
+    });
+
+    const heroBrand = document.querySelector('.hero-brandmark');
+    if (heroBrand) {
+      window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        heroBrand.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      }, { passive: true });
+    }
+  };
+
+  initMotionSystem();
 })();
