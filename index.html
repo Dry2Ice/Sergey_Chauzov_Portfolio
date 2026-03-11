@@ -3,81 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sergey Chauzov — Премиальная разработка сайтов</title>
-  <meta name="description" content="Создаю быстрые и эстетичные сайты под задачи бизнеса: стратегия, дизайн, разработка, поддержка и рост конверсии." />
+  <title>Sergey Chauzov — Cinematic Web Product Studio</title>
+  <meta name="description" content="Премиальная разработка сайтов: стратегия, визуальный дизайн, SEO-фундамент и запуск цифровых продуктов с высокой конверсией." />
+  <link rel="canonical" href="https://sergey-chauzov.dev/" />
+  <link rel="alternate" hreflang="ru" href="https://sergey-chauzov.dev/" />
+  <link rel="alternate" hreflang="en" href="https://sergey-chauzov.dev/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://sergey-chauzov.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sergey Chauzov — Cinematic Web Product Studio" />
+  <meta property="og:description" content="Сайты уровня premium: измеримые результаты, сильный дизайн, прозрачный процесс и быстрый старт." />
+  <meta property="og:url" content="https://sergey-chauzov.dev/" />
+  <meta property="og:image" content="https://sergey-chauzov.dev/logo.svg" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Sergey Chauzov Web Product Studio",
+      "url": "https://sergey-chauzov.dev/",
+      "description": "Premium website strategy, design and development with SEO and conversion optimization.",
+      "areaServed": ["RU", "EU", "Worldwide"],
+      "sameAs": ["https://t.me/SC_WebDev"]
+    }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Перейти к контенту</a>
   <header class="header">
     <div class="container topbar">
       <button id="langToggle" class="control-btn" aria-label="Переключить язык">RU</button>
-      <nav class="nav" aria-label="Разделы слева">
-        <a class="nav-link" href="development.html">Разработка</a>
-        <a class="nav-link" href="services.html">Возможности</a>
+      <nav class="nav" aria-label="Навигация слева">
+        <a class="nav-link" href="development.html">Процесс</a>
+        <a class="nav-link" href="services.html">Услуги</a>
       </nav>
       <a class="center-logo" href="index.html" aria-label="На главную">
         <img src="smalllogo.svg" class="small-logo" alt="Логотип Sergey Chauzov" />
       </a>
-      <nav class="nav" aria-label="Разделы справа">
-        <a class="nav-link" href="pricing.html">Прайс</a>
-        <a class="nav-link" href="info.html">Инфо</a>
+      <nav class="nav" aria-label="Навигация справа">
+        <a class="nav-link" href="pricing.html">Пакеты</a>
+        <a class="nav-link" href="info.html">Контакты</a>
       </nav>
       <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="container hero reveal">
-      <p class="badge">Web Product Design • Development • Support</p>
-      <h1>Сайты, которым доверяют: эстетика, результат и честная стоимость</h1>
-      <p>Я проектирую и запускаю сайты как полноценные цифровые продукты: с понятной стратегией, точной подачей бренда и измеримой эффективностью. Вся структура портфолио разделена на 5 логичных разделов, чтобы клиент быстро увидел ценность и принял решение.</p>
+      <div class="hero-brand">
+        <img src="logo.svg" class="hero-brandmark" alt="Sergey Chauzov full logo" />
+        <p id="heroBadge" class="badge">Web Product Design • Development • SEO Engineering</p>
+      </div>
+      <h1 id="heroTitle">Сайты, которые выглядят как премиальный бренд и работают как точная машина продаж</h1>
+      <p id="heroLead" class="lead">Я создаю не просто «красивые страницы», а цифровые продукты с сильной визуальной драматургией, технической дисциплиной и продуманной SEO-архитектурой. Вы получаете прямую коммуникацию со мной, прозрачные этапы и измеримый бизнес-результат.</p>
+      <div class="kpi-strip">
+        <div class="kpi"><strong id="kpi1v">24–72 часа</strong><span id="kpi1t">до первой рабочей итерации</span></div>
+        <div class="kpi"><strong id="kpi2v">90+ Lighthouse</strong><span id="kpi2t">при корректной контент-стратегии</span></div>
+        <div class="kpi"><strong id="kpi3v">1 окно связи</strong><span id="kpi3t">без менеджерской прослойки</span></div>
+      </div>
       <div class="cta-row">
-        <a class="btn btn-primary" href="pricing.html">Рассчитать стоимость</a>
-        <a class="btn" href="development.html">Как проходит разработка</a>
+        <a id="ctaMain" class="btn btn-primary" href="pricing.html">Рассчитать бюджет проекта</a>
+        <a id="ctaProcess" class="btn" href="development.html">Посмотреть 6-фазный процесс</a>
       </div>
     </section>
 
-    <section class="container grid three">
+    <section class="container grid two">
       <article class="card reveal">
-        <h2>Готовые проекты</h2>
-        <p>Реальные сайты с живым трафиком и бизнес-задачами. Каждый проект можно разобрать по этапам и метрикам.</p>
-        <a class="showcase-link" href="https://aplus-charisma.ru/" target="_blank" rel="noopener noreferrer"><span>Aplus Charisma</span><strong>Открыть ↗</strong></a>
+        <h2 id="caseTitle" class="section-title">Флагманский кейс</h2>
+        <p id="caseLead" class="section-lead">Кейс-формат: задача → стратегия → внедрение → цифры. Именно так строится доверие и обосновывается стоимость.</p>
+        <a class="showcase-link" href="https://aplus-charisma.ru/" target="_blank" rel="noopener noreferrer">
+          <span id="caseLinkLabel">Aplus Charisma — коммерческий сайт услуг</span><strong id="caseLinkCta">Открыть ↗</strong>
+        </a>
       </article>
       <article class="card reveal">
-        <h2>Что вы получаете</h2>
+        <h2 id="resultTitle" class="section-title">Что вы получаете в результате</h2>
         <ul>
-          <li>Современный визуальный уровень.</li>
-          <li>Быструю загрузку и SEO-основу.</li>
-          <li>Прозрачные этапы и контроль сроков.</li>
+          <li>Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.</li>
+          <li>Семантически корректный HTML и SEO-базу с подготовкой к schema.org.</li>
+          <li>Оптимизацию скорости, чтобы дизайн не «ломал» конверсию и индексацию.</li>
+          <li>Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.</li>
         </ul>
-      </article>
-      <article class="card reveal stats">
-        <h2>Факты, которые формируют доверие</h2>
-        <p><strong>90+</strong> по Lighthouse при корректном контенте.</p>
-        <p><strong>24–72 часа</strong> на первую рабочую итерацию.</p>
-        <p><strong>1 окно связи</strong> — без менеджерской прослойки.</p>
       </article>
     </section>
 
     <section class="container grid two">
       <article class="card reveal">
-        <h2>Что будет улучшаться дальше</h2>
-        <ul>
-          <li>Публикация кейсов в формате «задача → решение → результат».</li>
-          <li>Добавление видео-разбора процесса и отзывов клиентов.</li>
-          <li>Расширение англоязычной версии для международных заказов.</li>
-        </ul>
+        <h2 id="phaseTitle" class="section-title">6 фаз реализации</h2>
+        <div class="timeline">
+          <article><strong>1. Discovery</strong><p>Аудит, цели, сегменты и KPI проекта.</p></article>
+          <article><strong>2. UX / IA</strong><p>Архитектура страниц, сценарии и логика конверсии.</p></article>
+          <article><strong>3. Visual System</strong><p>Дизайн-система, типографика, токены, tone of brand.</p></article>
+          <article><strong>4. Build</strong><p>Разработка, формы, калькуляторы, интеграции, анимации.</p></article>
+          <article><strong>5. SEO + QA</strong><p>Metadata, schema, Core Web Vitals, проверка доступности.</p></article>
+          <article><strong>6. Launch + Growth</strong><p>Релиз, аналитика, улучшения по данным и гипотезам.</p></article>
+        </div>
       </article>
       <article class="card reveal">
-        <h2>SEO-качество на старте</h2>
-        <ul>
-          <li>Чёткая иерархия заголовков и семантические блоки.</li>
-          <li>Meta description на всех ключевых страницах.</li>
-          <li>Подготовка к schema.org и Open Graph в следующем спринте.</li>
-        </ul>
+        <h2 id="faqTitle" class="section-title">Ответы на главные вопросы</h2>
+        <div class="faq-item">
+          <strong>Можно ли начать с MVP и масштабировать позже?</strong>
+          <p>Да. Мы запускаем ядро быстро, а затем растим продукт по этапам без потери качества архитектуры.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Как подтверждается эффективность?</strong>
+          <p>Через метрики: скорость, конверсия, поведение пользователей, источники лидов и качество заявок.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Работаете ли с англоязычным рынком?</strong>
+          <p>Да. Сайт уже готовится к bilingual-стратегии и международному позиционированию.</p>
+        </div>
       </article>
     </section>
+
+    <section class="container card reveal">
+      <h2 id="finalTitle" class="section-title">Готовы усилить ваш бренд и продажи через сайт?</h2>
+      <p id="finalLead" class="section-lead">Следующий шаг — короткий бриф, определение целей и создание первой рабочей итерации в ближайшие дни.</p>
+      <div class="cta-row">
+        <a id="finalCta1" class="btn btn-primary" href="pricing.html">Запустить проект</a>
+        <a id="finalCta2" class="btn" href="info.html">Связаться напрямую</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Sergey Chauzov</strong>
+        <p id="footerLead" class="footer-meta">Independent Web Product Designer & Developer. Премиальные сайты с прозрачным процессом и упором на результат.</p>
+      </div>
+      <div>
+        <strong>Разделы</strong>
+        <p class="footer-meta"><a href="development.html">Процесс</a> · <a href="services.html">Услуги</a> · <a href="pricing.html">Пакеты</a></p>
+      </div>
+      <div>
+        <strong>Контакты</strong>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: hello@sergey-chauzov.dev</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
