@@ -19,7 +19,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Перейти к контенту</a>
-
   <header class="header">
     <div class="container topbar">
       <button id="langToggle" class="control-btn" aria-label="Переключить язык">RU</button>
@@ -39,22 +38,20 @@
   </header>
 
   <main id="main-content">
-
-    <!-- HERO -->
     <section class="container hero hero-cinematic reveal">
       <div>
-        <p class="hero-overline">Cinematic Product Design · Engineering · SEO</p>
         <div class="hero-brand">
           <img src="logo.svg" class="hero-brandmark" alt="Sergey Chauzov full logo" />
+          <p id="heroBadge" class="badge">Cinematic Product Design • Engineering • SEO</p>
         </div>
-        <h1 id="heroTitle">Сайты, которые выглядят как <em>искусство</em> и работают как системный канал продаж</h1>
+        <h1 id="heroTitle">Сайты, которые выглядят как искусство и работают как системный канал продаж</h1>
         <p id="heroLead" class="lead">Я проектирую цифровые продукты с кинематографичной подачей, инженерной дисциплиной и сильной SEO-архитектурой. Вы получаете визуальный вау-эффект, измеримые бизнес-метрики и прямую связь без посредников.</p>
         <div class="cta-row">
-          <a id="ctaMain" class="btn btn-primary" href="pricing.html"><span class="btn-text">Рассчитать бюджет проекта</span></a>
-          <a id="ctaProcess" class="btn" href="development.html"><span class="btn-text">Посмотреть 6-фазный процесс</span></a>
+          <a id="ctaMain" class="btn btn-primary" href="pricing.html">Рассчитать бюджет проекта</a>
+          <a id="ctaProcess" class="btn" href="development.html">Посмотреть 6-фазный процесс</a>
         </div>
       </div>
-      <aside class="panel-card hero-panel">
+      <aside class="hero-panel card">
         <p id="heroPanelTitle" class="eyebrow">Execution Intelligence</p>
         <ul class="hero-checks">
           <li id="heroCheck1">Первая рабочая версия за 24–72 часа.</li>
@@ -64,7 +61,6 @@
       </aside>
     </section>
 
-    <!-- KPI -->
     <section class="container kpi-strip reveal">
       <div class="kpi"><strong id="kpi1v">24–72 часа</strong><span id="kpi1t">до первой рабочей итерации</span></div>
       <div class="kpi"><strong id="kpi2v">90+ Lighthouse</strong><span id="kpi2t">при корректной контент-стратегии</span></div>
@@ -72,9 +68,11 @@
       <div class="kpi"><strong id="kpi4v">6 фаз</strong><span id="kpi4t">от стратегии до запуска и роста</span></div>
     </section>
 
-    <!-- MARQUEE -->
-    <section class="marquee-shell reveal" aria-label="Технологии и направления">
-      <div class="marquee">
+
+    <section class="container marquee-shell reveal">
+      <p id="marqueeTitle" class="eyebrow">Trusted stack</p>
+      <p id="marqueeLead" class="section-lead">Подход и качество вдохновлены digital-практиками лидеров рынка.</p>
+      <div class="marquee" aria-label="Технологии и направления">
         <div class="marquee-track">
           <span>Premium UX</span><span>Conversion Architecture</span><span>Motion Design</span><span>Technical SEO</span><span>Core Web Vitals</span><span>Design System</span><span>CRO Strategy</span>
           <span>Premium UX</span><span>Conversion Architecture</span><span>Motion Design</span><span>Technical SEO</span><span>Core Web Vitals</span><span>Design System</span><span>CRO Strategy</span>
@@ -82,111 +80,75 @@
       </div>
     </section>
 
-    <!-- WORK DIRECTIONS -->
     <section class="container reveal">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Направления</p>
-          <h2 id="workTitle" class="section-title" style="margin:0">Избранные направления, где сайт<br>даёт бизнес-результат</h2>
-        </div>
-      </div>
-      <div class="work-section">
-        <div class="grid three">
-          <article class="card cinematic-card">
-            <span class="card-number">01</span>
-            <p class="eyebrow" id="workCard1Tag">Services</p>
-            <h3 id="workCard1Title">Коммерческие сайты услуг</h3>
-            <p id="workCard1Text">Структура под лидогенерацию: оффер, доказательства, CTA, автоворонка и аналитика.</p>
-          </article>
-          <article class="card cinematic-card">
-            <span class="card-number">02</span>
-            <p class="eyebrow" id="workCard2Tag">Brand</p>
-            <h3 id="workCard2Title">Имиджевые бренд-платформы</h3>
-            <p id="workCard2Text">Эстетика премиум-сегмента с высокой скоростью и технологической чистотой.</p>
-          </article>
-          <article class="card cinematic-card">
-            <span class="card-number">03</span>
-            <p class="eyebrow" id="workCard3Tag">Scale</p>
-            <h3 id="workCard3Title">Масштабируемые продуктовые сайты</h3>
-            <p id="workCard3Text">Модульная система страниц, готовая к SEO-кластеру, кейсам и новым рынкам.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE + RESULTS -->
-    <section class="container reveal">
-      <div class="grid two" style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2rem;">
-        <article class="card">
-          <p class="eyebrow">Флагманский кейс</p>
-          <h2 id="caseTitle" class="section-title">Реальный проект — реальные метрики</h2>
-          <p id="caseLead" class="section-lead">Кейс-формат: задача → стратегия → внедрение → цифры. Это основа доверия и аргументации стоимости.</p>
-          <a class="showcase-link" href="https://aplus-charisma.ru/" target="_blank" rel="noopener noreferrer">
-            <span id="caseLinkLabel">Aplus Charisma — коммерческий сайт услуг</span>
-            <strong id="caseLinkCta">Открыть ↗</strong>
-          </a>
+      <h2 id="workTitle" class="section-title">Избранные направления, где сайт даёт бизнес-результат</h2>
+      <div class="grid three">
+        <article class="card cinematic-card">
+          <p class="eyebrow" id="workCard1Tag">Services</p>
+          <h3 id="workCard1Title">Коммерческие сайты услуг</h3>
+          <p id="workCard1Text">Структура под лидогенерацию: оффер, доказательства, CTA, автоворонка и аналитика.</p>
         </article>
-        <article class="card" style="background:var(--surface-2)">
-          <p class="eyebrow">Результат</p>
-          <h2 id="resultTitle" class="section-title">Что вы получаете</h2>
-          <ul style="padding-left:0;list-style:none;margin:0;display:flex;flex-direction:column;gap:.1rem;">
-            <li id="resultLi1" style="padding:.65rem 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--muted);">→ Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.</li>
-            <li id="resultLi2" style="padding:.65rem 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--muted);">→ Семантически корректный HTML и SEO-базу с подготовкой к schema.org.</li>
-            <li id="resultLi3" style="padding:.65rem 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--muted);">→ Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.</li>
-            <li id="resultLi4" style="padding:.65rem 0;font-size:.9rem;color:var(--muted);">→ Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.</li>
-          </ul>
+        <article class="card cinematic-card">
+          <p class="eyebrow" id="workCard2Tag">Brand</p>
+          <h3 id="workCard2Title">Имиджевые бренд-платформы</h3>
+          <p id="workCard2Text">Эстетика премиум-сегмента с высокой скоростью и технологической чистотой.</p>
+        </article>
+        <article class="card cinematic-card">
+          <p class="eyebrow" id="workCard3Tag">Scale</p>
+          <h3 id="workCard3Title">Масштабируемые продуктовые сайты</h3>
+          <p id="workCard3Text">Модульная система страниц, готовая к SEO-кластеру, кейсам и новым рынкам.</p>
         </article>
       </div>
     </section>
 
-    <!-- ADVANTAGE -->
-    <section class="container reveal">
-      <div class="advantage-block">
-        <blockquote class="advantage-quote">
-          «Дизайн-система, разработка и SEO в единой продуктовой логике — вместо разрозненных подрядчиков»
-        </blockquote>
-        <div>
-          <p class="eyebrow">Strategic Advantage</p>
-          <p style="color:var(--muted);line-height:1.8;font-size:.95rem;">Визуальная айдентика, техническая чистота и SEO-архитектура проектируются одновременно. Это ускоряет запуск, снижает стоимость правок и усиливает конверсию.</p>
-        </div>
-      </div>
+    <section class="container grid two reveal">
+      <article class="card">
+        <h2 id="caseTitle" class="section-title">Флагманский кейс</h2>
+        <p id="caseLead" class="section-lead">Кейс-формат: задача → стратегия → внедрение → цифры. Это основа доверия и аргументации стоимости.</p>
+        <a class="showcase-link" href="https://aplus-charisma.ru/" target="_blank" rel="noopener noreferrer">
+          <span id="caseLinkLabel">Aplus Charisma — коммерческий сайт услуг</span><strong id="caseLinkCta">Открыть ↗</strong>
+        </a>
+      </article>
+      <article class="card">
+        <h2 id="resultTitle" class="section-title">Что вы получаете в результате</h2>
+        <ul>
+          <li id="resultLi1">Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.</li>
+          <li id="resultLi2">Семантически корректный HTML и SEO-базу с подготовкой к schema.org.</li>
+          <li id="resultLi3">Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.</li>
+          <li id="resultLi4">Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.</li>
+        </ul>
+      </article>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="container">
-      <div class="final-cta reveal">
-        <p class="badge" style="margin:0 auto 1.2rem;display:inline-flex;">Готовы начать?</p>
-        <h2 id="finalTitle" class="section-title">Сделаем сайт центром роста вашего бизнеса</h2>
-        <p id="finalLead" class="section-lead">Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.</p>
-        <div class="cta-row">
-          <a id="finalCta1" class="btn btn-primary" href="pricing.html"><span class="btn-text">Запустить проект</span></a>
-          <a id="finalCta2" class="btn" href="info.html"><span class="btn-text">Связаться напрямую</span></a>
-        </div>
-      </div>
+    <section class="container card reveal">
+      <p class="badge">Strategic Advantage</p>
+      <h2 class="section-title">Дизайн-система, разработка и SEO в одной связке</h2>
+      <p class="section-lead">Вместо разрозненных подрядчиков вы получаете единую продуктовую логику: визуальная айдентика, техническая чистота и SEO-архитектура проектируются одновременно. Это ускоряет запуск, снижает стоимость правок и усиливает конверсию.</p>
     </section>
 
+    <section class="container card reveal">
+      <h2 id="finalTitle" class="section-title">Готовы сделать сайт центром роста вашего бизнеса?</h2>
+      <p id="finalLead" class="section-lead">Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.</p>
+      <div class="cta-row">
+        <a id="finalCta1" class="btn btn-primary" href="pricing.html">Запустить проект</a>
+        <a id="finalCta2" class="btn" href="info.html">Связаться напрямую</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong class="footer-brand">Sergey Chauzov</strong>
+        <strong>Sergey Chauzov</strong>
         <p id="footerLead" class="footer-meta">Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.</p>
       </div>
       <div>
-        <strong id="footerSectionsTitle" style="font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);">Разделы</strong>
-        <p class="footer-meta" style="margin-top:.75rem;">
-          <a href="development.html">Процесс</a><br/>
-          <a href="services.html">Услуги</a><br/>
-          <a href="pricing.html">Пакеты</a>
-        </p>
+        <strong id="footerSectionsTitle">Разделы</strong>
+        <p class="footer-meta"><a href="development.html">Процесс</a> · <a href="services.html">Услуги</a> · <a href="pricing.html">Пакеты</a></p>
       </div>
       <div>
-        <strong id="footerContactTitle" style="font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);">Контакты</strong>
-        <p class="footer-meta" style="margin-top:.75rem;">
-          Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br/>
-          Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a>
-        </p>
+        <strong id="footerContactTitle">Контакты</strong>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
   </footer>
