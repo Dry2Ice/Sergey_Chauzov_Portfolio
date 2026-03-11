@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://sergey-chauzov.dev/info.html" />
   <link rel="alternate" hreflang="ru" href="https://sergey-chauzov.dev/info.html" />
   <link rel="alternate" hreflang="en" href="https://sergey-chauzov.dev/info.html?lang=en" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
@@ -18,6 +19,7 @@
       <nav class="nav"><a class="nav-link" href="development.html">Процесс</a><a class="nav-link" href="services.html">Услуги</a></nav>
       <a class="center-logo" href="index.html" aria-label="На главную"><img src="smalllogo.svg" class="small-logo" alt="Логотип" /></a>
       <nav class="nav"><a class="nav-link" href="pricing.html">Пакеты</a><a class="nav-link active" href="info.html">Контакты</a></nav>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
       <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
@@ -26,8 +28,12 @@
     <section class="container hero reveal">
       <p id="infoBadge" class="badge">Доверие и коммуникация</p>
       <h1 id="infoTitle">Прямая коммуникация, прозрачные условия и поддержка после запуска</h1>
-      <p id="infoLead" class="lead">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a> · Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
-      <p id="infoLegal" class="legal">Статус: самозанятый. По запросу предоставляются договор, чек и закрывающие документы.</p>
+      <p id="infoLead" class="lead">Лучший способ начать — написать напрямую. Ответ в течение 24 часов.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">✈ Написать в Telegram</a>
+        <a class="btn" href="mailto:chuzovser094@gmail.com">✉ chuzovser094@gmail.com</a>
+      </div>
+      <p id="infoLegal" class="legal" style="margin-top:.85rem">Статус: самозанятый. По запросу предоставляются договор, чек и закрывающие документы.</p>
     </section>
 
     <section class="container grid two reveal">
@@ -70,6 +76,17 @@
         <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
+
+    <div class="container" style="border-top: 1px solid var(--border); margin-top: 1rem; padding-top: .85rem;"><p class="footer-meta" style="text-align:center">© <span id="copyrightYear">2025</span> Sergey Chauzov. Все права защищены.</p></div>
   </footer>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+    <a href="index.html">Главная</a>
+    <a href="development.html">Процесс</a>
+    <a href="services.html">Услуги</a>
+    <a href="pricing.html">Пакеты</a>
+    <a href="info.html">Контакты</a>
+  </nav>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
 </body>
 </html>

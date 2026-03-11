@@ -14,6 +14,7 @@
   <meta property="og:description" content="Сайты уровня premium: измеримые результаты, сильный дизайн, прозрачный процесс и быстрый старт." />
   <meta property="og:url" content="https://sergey-chauzov.dev/" />
   <meta property="og:image" content="https://sergey-chauzov.dev/logo.svg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
@@ -33,6 +34,7 @@
         <a class="nav-link" href="pricing.html">Пакеты</a>
         <a class="nav-link" href="info.html">Контакты</a>
       </nav>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
       <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
@@ -151,6 +153,17 @@
         <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
+
+    <div class="container" style="border-top: 1px solid var(--border); margin-top: 1rem; padding-top: .85rem;"><p class="footer-meta" style="text-align:center">© <span id="copyrightYear">2025</span> Sergey Chauzov. Все права защищены.</p></div>
   </footer>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+    <a href="index.html">Главная</a>
+    <a href="development.html">Процесс</a>
+    <a href="services.html">Услуги</a>
+    <a href="pricing.html">Пакеты</a>
+    <a href="info.html">Контакты</a>
+  </nav>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
 </body>
 </html>
