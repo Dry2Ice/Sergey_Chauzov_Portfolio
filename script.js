@@ -55,7 +55,7 @@
         resultTitle: 'Что вы получаете в результате',
         resultLi1: 'Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.', resultLi2: 'Семантически корректный HTML и SEO-базу с подготовкой к schema.org.',
         resultLi3: 'Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.', resultLi4: 'Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.',
-        progressBadge: 'Прогресс дорожной карты', progressTitle: 'Прогресс по Hollywood-grade плану: 46%', progressLead: 'Усилены визуальная система, базовый CRO, bilingual-контур, калькулятор и единая нижняя панель. Следующий этап: публикация полноценных кейсов с метриками и SEO-кластер статей.',
+        marqueeTitle: 'Стек и стандарты', marqueeLead: 'Подход и качество вдохновлены digital-практиками лидеров рынка.',
         finalTitle: 'Готовы сделать сайт центром роста вашего бизнеса?', finalLead: 'Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.',
         finalCta1: 'Запустить проект', finalCta2: 'Связаться напрямую', footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
@@ -76,33 +76,33 @@
         resultTitle: 'What You Get',
         resultLi1: 'Premium visual quality with clear hierarchy and conversion-oriented CTA flow.', resultLi2: 'Semantic HTML foundation with SEO readiness and schema.org preparation.',
         resultLi3: 'Performance optimization so design never harms conversion or indexing.', resultLi4: 'Scalable structure for case studies, content, and multilingual growth.',
-        progressBadge: 'Roadmap Progress', progressTitle: 'Hollywood-grade roadmap progress: 46%', progressLead: 'Visual system, baseline CRO, bilingual foundation, estimator, and unified footer are upgraded. Next phase: full metric-based case studies and an SEO article cluster.',
+        marqueeTitle: 'Stack & standards', marqueeLead: 'The approach is inspired by digital execution patterns of market-leading brands.',
         finalTitle: 'Ready to make your website a growth engine?', finalLead: 'Next step: a focused brief, KPI alignment, and the first working version within days.',
         finalCta1: 'Start project', finalCta2: 'Contact directly', footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
       }
     },
     pricing: {
       ru: {
-        pricingBadge: 'Прозрачная модель стоимости', pricingTitle: 'Три масштаба проекта + интерактивный калькулятор бюджета',
-        pricingLead: 'Выберите ориентир по уровню проекта, затем настройте калькулятор и получите прогноз по стоимости, сроку и сложности.',
+        pricingBadge: 'Прозрачная модель стоимости', pricingTitle: 'Три масштаба проекта + продвинутый смарт-калькулятор',
+        pricingLead: 'Выберите уровень проекта и настройте параметры пресейла: дизайн, SEO, интеграции и дедлайн. Система покажет стоимость, срок и сложность.',
         priceStart1: 'Лендинг / MVP', priceStart2: 'Базовая SEO-структура', priceStart3: 'Запуск за 2–4 недели',
         priceGrowth1: 'Сайт услуг / корпоративный', priceGrowth2: 'Аналитика + события', priceGrowth3: 'Рост по этапам',
         priceScale1: 'Сложные сценарии и интеграции', priceScale2: 'Кастомные модули', priceScale3: 'Техподдержка и SLA',
-        calcTitle: 'Калькулятор бюджета', calcLead: 'Блок построен как быстрый пресейл-инструмент: вы сразу видите ориентир и структуру сметы.',
-        calcPagesLabel: 'Количество страниц', calcDeadlineLabel: 'Желаемый дедлайн', pricingCta: 'Обсудить проект',
+        calcTitle: 'Продвинутый калькулятор бюджета', calcLead: 'Настройте параметры проекта как в реальном пресейле: объём, скорость, уровень дизайна, SEO и интеграции.',
+        calcPagesLabel: 'Количество страниц', calcDeadlineLabel: 'Желаемый дедлайн', calcDesignLabel: 'Уровень визуального продакшена', calcSeoLabel: 'SEO пакет', pricingCta: 'Обсудить проект',
         optTitle: 'Как оптимизировать бюджет без потери качества',
         optLi1: 'Запустить MVP на ключевые сценарии и масштабировать в спринтах.', optLi2: 'Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.',
         optLi3: 'Использовать единую дизайн-систему вместо хаотичных правок по блокам.', optLi4: 'Согласовывать контент заранее — это заметно ускоряет релиз.',
         footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
       en: {
-        pricingBadge: 'Transparent Pricing Model', pricingTitle: 'Three project scales + interactive budget estimator',
-        pricingLead: 'Choose a project scale, then configure the calculator to get budget, timeline, and complexity estimates.',
+        pricingBadge: 'Transparent Pricing Model', pricingTitle: 'Three project scales + advanced smart estimator',
+        pricingLead: 'Choose project scale and configure pre-sale parameters: design depth, SEO package, integrations, and deadline.',
         priceStart1: 'Landing page / MVP', priceStart2: 'Basic SEO structure', priceStart3: 'Launch in 2–4 weeks',
         priceGrowth1: 'Services / corporate website', priceGrowth2: 'Analytics + events', priceGrowth3: 'Phased growth',
         priceScale1: 'Complex scenarios and integrations', priceScale2: 'Custom modules', priceScale3: 'Support and SLA',
-        calcTitle: 'Budget Estimator', calcLead: 'Built as a fast pre-sale instrument: immediate estimate plus transparent budget structure.',
-        calcPagesLabel: 'Number of pages', calcDeadlineLabel: 'Desired deadline', pricingCta: 'Discuss project',
+        calcTitle: 'Advanced Budget Estimator', calcLead: 'Configure your project like a real pre-sale call: scope, speed, design depth, SEO, and integrations.',
+        calcPagesLabel: 'Number of pages', calcDeadlineLabel: 'Desired deadline', calcDesignLabel: 'Visual production level', calcSeoLabel: 'SEO package', pricingCta: 'Discuss project',
         optTitle: 'How to optimize budget without sacrificing quality',
         optLi1: 'Launch MVP for key scenarios and scale through sprints.', optLi2: 'Implement core pages and lead generation first, then expand content.',
         optLi3: 'Use one design system instead of chaotic block-by-block edits.', optLi4: 'Approve content early to accelerate release significantly.',
@@ -234,12 +234,33 @@
   const pageCountOutput = document.getElementById('pageCountOutput');
   const deadline = document.getElementById('deadline');
   const deadlineOutput = document.getElementById('deadlineOutput');
+  const designLevel = document.getElementById('designLevel');
+  const seoPack = document.getElementById('seoPack');
 
   const formatCurrency = (value, lang) => (lang === 'en'
     ? `$${Math.round(value / 95).toLocaleString('en-US')}`
     : `${Number(value).toLocaleString('ru-RU')} ₽`);
 
   const getBaseValue = () => Number(Array.from(projectTypeOptions).find((item) => item.checked)?.value || 0);
+
+  function animateEstimateValue(node, from, to, lang) {
+    if (!node) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || Math.abs(to - from) < 1000) {
+      node.textContent = formatCurrency(to, lang);
+      return;
+    }
+    const start = performance.now();
+    const duration = 420;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - ((1 - p) ** 3);
+      const val = Math.round(from + (to - from) * eased);
+      node.textContent = formatCurrency(val, lang);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
 
   function updateEstimate(lang = safeGet(langKey, 'ru')) {
     const estimateValue = document.getElementById('estimateValue');
@@ -253,18 +274,25 @@
 
     const base = getBaseValue();
     const pages = pageCount ? Number(pageCount.value) : 6;
-    const deadlineWeeks = deadline ? Number(deadline.value) : 5;
-    const pageExtra = Math.max(0, pages - 5) * 1200;
+    const deadlineWeeks = deadline ? Number(deadline.value) : 6;
+    const designCost = Number(designLevel?.value || 0);
+    const seoCost = Number(seoPack?.value || 0);
+    const pageExtra = Math.max(0, pages - 5) * 1500;
     const addonsTotal = Array.from(addOns).filter((a) => a.checked).reduce((sum, item) => sum + Number(item.value), 0);
-    const urgentMultiplier = deadlineWeeks <= 3 ? 1.25 : deadlineWeeks <= 5 ? 1.1 : 1;
-    const total = Math.round((base + pageExtra + addonsTotal) * urgentMultiplier / 1000) * 1000;
+    const urgency = deadlineWeeks <= 3 ? 1.35 : deadlineWeeks <= 5 ? 1.18 : deadlineWeeks <= 7 ? 1.08 : 1;
+    const subtotal = base + pageExtra + designCost + seoCost + addonsTotal;
+    const total = Math.round(subtotal * urgency / 1000) * 1000;
 
-    estimateValue.textContent = formatCurrency(total, lang);
+    const prev = Number((estimateValue.dataset.value || '0'));
+    estimateValue.dataset.value = String(total);
+    animateEstimateValue(estimateValue, prev, total, lang);
     if (pageCountOutput) pageCountOutput.value = String(pages);
     if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${lang === 'en' ? 'weeks' : 'недель'}`;
-    if (estimateTimeline) estimateTimeline.textContent = `${Math.max(2, Math.round(pages / 3))}–${Math.max(4, Math.round(pages / 2))} ${lang === 'en' ? 'weeks' : 'недель'}`;
+    const minTimeline = Math.max(2, Math.round(pages / 4) + (designCost > 0 ? 1 : 0));
+    const maxTimeline = Math.max(minTimeline + 1, Math.round(pages / 2) + (addonsTotal > 15000 ? 2 : 1));
+    if (estimateTimeline) estimateTimeline.textContent = `${minTimeline}–${maxTimeline} ${lang === 'en' ? 'weeks' : 'недель'}`;
 
-    const complexity = Math.min(100, Math.round(base / 1500 + pages * 2 + addonsTotal / 1800));
+    const complexity = Math.min(100, Math.round(base / 1800 + pages * 1.8 + addonsTotal / 1600 + designCost / 1200 + seoCost / 1600));
     if (complexityValue) complexityValue.textContent = lang === 'en'
       ? (complexity < 40 ? 'Basic' : complexity < 70 ? 'Medium' : 'High')
       : (complexity < 40 ? 'Базовый' : complexity < 70 ? 'Средний' : 'Высокий');
@@ -278,8 +306,8 @@
 
     if (estimateBreakdown) {
       estimateBreakdown.innerHTML = lang === 'en'
-        ? `<li>Base: ${formatCurrency(base, lang)}</li><li>Scale: ${formatCurrency(pageExtra, lang)}</li><li>Add-ons: ${formatCurrency(addonsTotal, lang)}</li>`
-        : `<li>База: ${formatCurrency(base, lang)}</li><li>Масштаб: ${formatCurrency(pageExtra, lang)}</li><li>Опции: ${formatCurrency(addonsTotal, lang)}</li>`;
+        ? `<li>Base package: ${formatCurrency(base, lang)}</li><li>Page scaling: ${formatCurrency(pageExtra, lang)}</li><li>Design level: ${formatCurrency(designCost, lang)}</li><li>SEO package: ${formatCurrency(seoCost, lang)}</li><li>Add-ons: ${formatCurrency(addonsTotal, lang)}</li><li>Urgency factor: x${urgency.toFixed(2)}</li>`
+        : `<li>Базовый пакет: ${formatCurrency(base, lang)}</li><li>Масштаб страниц: ${formatCurrency(pageExtra, lang)}</li><li>Дизайн-уровень: ${formatCurrency(designCost, lang)}</li><li>SEO пакет: ${formatCurrency(seoCost, lang)}</li><li>Опции: ${formatCurrency(addonsTotal, lang)}</li><li>Коэффициент срочности: x${urgency.toFixed(2)}</li>`;
     }
   }
 
@@ -305,6 +333,8 @@
   addOns.forEach((addon) => addon.addEventListener('change', () => updateEstimate()));
   pageCount?.addEventListener('input', () => updateEstimate());
   deadline?.addEventListener('input', () => updateEstimate());
+  designLevel?.addEventListener('change', () => updateEstimate());
+  seoPack?.addEventListener('change', () => updateEstimate());
   updateEstimate();
 
   const revealObserver = new IntersectionObserver((entries, obs) => {
@@ -315,4 +345,46 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach((item) => revealObserver.observe(item));
+
+  const initMotionSystem = () => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const progress = document.createElement('div');
+    progress.className = 'scroll-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    document.body.append(progress);
+
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = `${Math.min(100, Math.max(0, ratio))}%`;
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    if (reduced || window.matchMedia('(max-width: 980px)').matches) return;
+
+    document.querySelectorAll('.card, .kpi').forEach((item) => {
+      item.addEventListener('mousemove', (e) => {
+        const r = item.getBoundingClientRect();
+        const rx = ((e.clientY - r.top) / r.height - 0.5) * -5;
+        const ry = ((e.clientX - r.left) / r.width - 0.5) * 6;
+        item.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = '';
+      });
+    });
+
+    const heroBrand = document.querySelector('.hero-brandmark');
+    if (heroBrand) {
+      window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        heroBrand.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      }, { passive: true });
+    }
+  };
+
+  initMotionSystem();
 })();
