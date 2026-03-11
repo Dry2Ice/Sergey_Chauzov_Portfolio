@@ -2,7 +2,6 @@
   const themeKey = 'portfolio-theme';
   const langKey = 'portfolio-lang';
   const pageKey = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  let currentLang = 'ru';
 
   const safeGet = (key, fallback) => {
     try {
@@ -25,97 +24,159 @@
     if (node) node.textContent = value;
   };
 
-  const translations = {
+  const dictionaries = {
     common: {
       ru: {
-        navProcess: 'Процесс',
-        navServices: 'Услуги',
-        navPricing: 'Пакеты',
-        navContact: 'Контакты',
-        skip: 'Перейти к контенту',
-        langBtn: 'RU',
-        langAria: 'Переключить язык',
-        themeAria: 'Сменить тему'
+        navProcess: 'Процесс', navServices: 'Услуги', navPricing: 'Пакеты', navContact: 'Контакты',
+        skip: 'Перейти к контенту', langBtn: 'RU', langAria: 'Переключить язык', themeAria: 'Сменить тему',
+        footerSectionsTitle: 'Разделы', footerContactTitle: 'Контакты'
       },
       en: {
-        navProcess: 'Process',
-        navServices: 'Services',
-        navPricing: 'Pricing',
-        navContact: 'Contact',
-        skip: 'Skip to content',
-        langBtn: 'EN',
-        langAria: 'Switch language',
-        themeAria: 'Switch theme'
+        navProcess: 'Process', navServices: 'Services', navPricing: 'Pricing', navContact: 'Contact',
+        skip: 'Skip to content', langBtn: 'EN', langAria: 'Switch language', themeAria: 'Switch theme',
+        footerSectionsTitle: 'Sections', footerContactTitle: 'Contact'
       }
     },
     index: {
       ru: {
-        heroBadge: 'Web Product Design • Development • SEO Engineering',
-        heroTitle: 'Сайты, которые выглядят как премиальный бренд и работают как точная машина продаж',
-        heroLead: 'Я создаю не просто «красивые страницы», а цифровые продукты с сильной визуальной драматургией, технической дисциплиной и продуманной SEO-архитектурой. Вы получаете прямую коммуникацию со мной, прозрачные этапы и измеримый бизнес-результат.',
-        kpi1v: '24–72 часа',
-        kpi1t: 'до первой рабочей итерации',
-        kpi2v: '90+ Lighthouse',
-        kpi2t: 'при корректной контент-стратегии',
-        kpi3v: '1 окно связи',
-        kpi3t: 'без менеджерской прослойки',
-        ctaMain: 'Рассчитать бюджет проекта',
-        ctaProcess: 'Посмотреть 6-фазный процесс',
-        caseTitle: 'Флагманский кейс',
-        caseLead: 'Кейс-формат: задача → стратегия → внедрение → цифры. Именно так строится доверие и обосновывается стоимость.',
-        caseLinkLabel: 'Aplus Charisma — коммерческий сайт услуг',
-        caseLinkCta: 'Открыть ↗',
+        heroBadge: 'Cinematic Product Design • Engineering • SEO',
+        heroTitle: 'Сайты, которые выглядят как искусство и работают как системный канал продаж',
+        heroLead: 'Я проектирую цифровые продукты с кинематографичной подачей, инженерной дисциплиной и сильной SEO-архитектурой. Вы получаете визуальный вау-эффект, измеримые бизнес-метрики и прямую связь без посредников.',
+        ctaMain: 'Рассчитать бюджет проекта', ctaProcess: 'Посмотреть 6-фазный процесс',
+        heroPanelTitle: 'Система исполнения',
+        heroCheck1: 'Первая рабочая версия за 24–72 часа.', heroCheck2: 'Чёткая архитектура под масштаб и новые языки.', heroCheck3: 'KPI-фреймворк: скорость, конверсия, заявки.',
+        kpi1v: '24–72 часа', kpi1t: 'до первой рабочей итерации', kpi2v: '90+ Lighthouse', kpi2t: 'при корректной контент-стратегии',
+        kpi3v: '1 окно связи', kpi3t: 'без менеджерской прослойки', kpi4v: '6 фаз', kpi4t: 'от стратегии до запуска и роста',
+        workTitle: 'Избранные направления, где сайт даёт бизнес-результат',
+        workCard1Tag: 'Услуги', workCard1Title: 'Коммерческие сайты услуг', workCard1Text: 'Структура под лидогенерацию: оффер, доказательства, CTA, автоворонка и аналитика.',
+        workCard2Tag: 'Бренд', workCard2Title: 'Имиджевые бренд-платформы', workCard2Text: 'Эстетика премиум-сегмента с высокой скоростью и технологической чистотой.',
+        workCard3Tag: 'Масштаб', workCard3Title: 'Масштабируемые продуктовые сайты', workCard3Text: 'Модульная система страниц, готовая к SEO-кластеру, кейсам и новым рынкам.',
+        caseTitle: 'Флагманский кейс', caseLead: 'Кейс-формат: задача → стратегия → внедрение → цифры. Это основа доверия и аргументации стоимости.', caseLinkLabel: 'Aplus Charisma — коммерческий сайт услуг', caseLinkCta: 'Открыть ↗',
         resultTitle: 'Что вы получаете в результате',
-        phaseTitle: '6 фаз реализации',
-        faqTitle: 'Ответы на главные вопросы',
-        finalTitle: 'Готовы усилить ваш бренд и продажи через сайт?',
-        finalLead: 'Следующий шаг — короткий бриф, определение целей и создание первой рабочей итерации в ближайшие дни.',
-        finalCta1: 'Запустить проект',
-        finalCta2: 'Связаться напрямую',
-        footerLead: 'Independent Web Product Designer & Developer. Премиальные сайты с прозрачным процессом и упором на результат.'
+        resultLi1: 'Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.', resultLi2: 'Семантически корректный HTML и SEO-базу с подготовкой к schema.org.',
+        resultLi3: 'Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.', resultLi4: 'Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.',
+        progressBadge: 'Прогресс дорожной карты', progressTitle: 'Прогресс по Hollywood-grade плану: 46%', progressLead: 'Усилены визуальная система, базовый CRO, bilingual-контур, калькулятор и единая нижняя панель. Следующий этап: публикация полноценных кейсов с метриками и SEO-кластер статей.',
+        finalTitle: 'Готовы сделать сайт центром роста вашего бизнеса?', finalLead: 'Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.',
+        finalCta1: 'Запустить проект', finalCta2: 'Связаться напрямую', footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
       en: {
         heroBadge: 'Cinematic Product Design • Engineering • SEO',
-        heroTitle: 'Websites that look like premium brands and perform like precision sales machines',
-        heroLead: 'I build not just beautiful pages, but digital products with cinematic visual direction, engineering discipline, and SEO-ready architecture. You get direct communication, transparent milestones, and measurable business outcomes.',
-        kpi1v: '24–72 hours',
-        kpi1t: 'to first working iteration',
-        kpi2v: '90+ Lighthouse',
-        kpi2t: 'with proper content strategy',
-        kpi3v: '1 decision maker',
-        kpi3t: 'no management layer in between',
-        ctaMain: 'Calculate project budget',
-        ctaProcess: 'View the 6-phase process',
-        caseTitle: 'Flagship Case Study',
-        caseLead: 'Structure: challenge → strategy → execution → measurable impact. This is how trust and pricing are justified.',
-        caseLinkLabel: 'Aplus Charisma — commercial services website',
-        caseLinkCta: 'Open ↗',
+        heroTitle: 'Websites that feel like art and perform like systematic sales engines',
+        heroLead: 'I craft digital products with cinematic direction, engineering discipline, and robust SEO architecture. You get emotional impact, measurable business metrics, and direct communication without intermediaries.',
+        ctaMain: 'Calculate project budget', ctaProcess: 'View the 6-phase process',
+        heroPanelTitle: 'Execution Intelligence',
+        heroCheck1: 'First working version in 24–72 hours.', heroCheck2: 'Scalable architecture for growth and multilingual expansion.', heroCheck3: 'KPI framework: speed, conversion, and lead quality.',
+        kpi1v: '24–72 hours', kpi1t: 'to first working iteration', kpi2v: '90+ Lighthouse', kpi2t: 'with proper content strategy',
+        kpi3v: '1 communication window', kpi3t: 'no management layer', kpi4v: '6 phases', kpi4t: 'from strategy to launch and growth',
+        workTitle: 'Core directions where a website drives business impact',
+        workCard1Tag: 'Services', workCard1Title: 'Commercial service websites', workCard1Text: 'Lead-focused structure: offer, proof, CTA flow, funnel logic, and analytics.',
+        workCard2Tag: 'Brand', workCard2Title: 'Premium brand platforms', workCard2Text: 'High-end aesthetics with fast performance and technical clarity.',
+        workCard3Tag: 'Scale', workCard3Title: 'Scalable product websites', workCard3Text: 'Modular page system ready for SEO clusters, case studies, and new markets.',
+        caseTitle: 'Flagship Case Study', caseLead: 'Format: challenge → strategy → execution → metrics. This is the foundation of trust and pricing logic.', caseLinkLabel: 'Aplus Charisma — commercial services website', caseLinkCta: 'Open ↗',
         resultTitle: 'What You Get',
-        phaseTitle: '6 Delivery Phases',
-        faqTitle: 'Key Questions Answered',
-        finalTitle: 'Ready to elevate your brand and sales with a better website?',
-        finalLead: 'Next step: a focused brief, clear priorities, and the first working iteration in days—not months.',
-        finalCta1: 'Start project',
-        finalCta2: 'Contact directly',
+        resultLi1: 'Premium visual quality with clear hierarchy and conversion-oriented CTA flow.', resultLi2: 'Semantic HTML foundation with SEO readiness and schema.org preparation.',
+        resultLi3: 'Performance optimization so design never harms conversion or indexing.', resultLi4: 'Scalable structure for case studies, content, and multilingual growth.',
+        progressBadge: 'Roadmap Progress', progressTitle: 'Hollywood-grade roadmap progress: 46%', progressLead: 'Visual system, baseline CRO, bilingual foundation, estimator, and unified footer are upgraded. Next phase: full metric-based case studies and an SEO article cluster.',
+        finalTitle: 'Ready to make your website a growth engine?', finalLead: 'Next step: a focused brief, KPI alignment, and the first working version within days.',
+        finalCta1: 'Start project', finalCta2: 'Contact directly', footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
+      }
+    },
+    pricing: {
+      ru: {
+        pricingBadge: 'Прозрачная модель стоимости', pricingTitle: 'Три масштаба проекта + интерактивный калькулятор бюджета',
+        pricingLead: 'Выберите ориентир по уровню проекта, затем настройте калькулятор и получите прогноз по стоимости, сроку и сложности.',
+        priceStart1: 'Лендинг / MVP', priceStart2: 'Базовая SEO-структура', priceStart3: 'Запуск за 2–4 недели',
+        priceGrowth1: 'Сайт услуг / корпоративный', priceGrowth2: 'Аналитика + события', priceGrowth3: 'Рост по этапам',
+        priceScale1: 'Сложные сценарии и интеграции', priceScale2: 'Кастомные модули', priceScale3: 'Техподдержка и SLA',
+        calcTitle: 'Калькулятор бюджета', calcLead: 'Блок построен как быстрый пресейл-инструмент: вы сразу видите ориентир и структуру сметы.',
+        calcPagesLabel: 'Количество страниц', calcDeadlineLabel: 'Желаемый дедлайн', pricingCta: 'Обсудить проект',
+        optTitle: 'Как оптимизировать бюджет без потери качества',
+        optLi1: 'Запустить MVP на ключевые сценарии и масштабировать в спринтах.', optLi2: 'Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.',
+        optLi3: 'Использовать единую дизайн-систему вместо хаотичных правок по блокам.', optLi4: 'Согласовывать контент заранее — это заметно ускоряет релиз.',
+        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+      },
+      en: {
+        pricingBadge: 'Transparent Pricing Model', pricingTitle: 'Three project scales + interactive budget estimator',
+        pricingLead: 'Choose a project scale, then configure the calculator to get budget, timeline, and complexity estimates.',
+        priceStart1: 'Landing page / MVP', priceStart2: 'Basic SEO structure', priceStart3: 'Launch in 2–4 weeks',
+        priceGrowth1: 'Services / corporate website', priceGrowth2: 'Analytics + events', priceGrowth3: 'Phased growth',
+        priceScale1: 'Complex scenarios and integrations', priceScale2: 'Custom modules', priceScale3: 'Support and SLA',
+        calcTitle: 'Budget Estimator', calcLead: 'Built as a fast pre-sale instrument: immediate estimate plus transparent budget structure.',
+        calcPagesLabel: 'Number of pages', calcDeadlineLabel: 'Desired deadline', pricingCta: 'Discuss project',
+        optTitle: 'How to optimize budget without sacrificing quality',
+        optLi1: 'Launch MVP for key scenarios and scale through sprints.', optLi2: 'Implement core pages and lead generation first, then expand content.',
+        optLi3: 'Use one design system instead of chaotic block-by-block edits.', optLi4: 'Approve content early to accelerate release significantly.',
         footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
       }
     },
-    pageTitles: {
-      'development.html': {
-        ru: { id: 'devTitle', text: 'Прозрачный production-процесс: каждое решение привязано к KPI и бизнес-цели' },
-        en: { id: 'devTitle', text: 'Transparent production workflow: every decision is tied to KPI and business goals' }
+    services: {
+      ru: {
+        servicesBadge: 'Стек компетенций', servicesTitle: 'Полный цикл: стратегия, дизайн, разработка, SEO и рост после релиза',
+        servicesLead: 'Каждая услуга ориентирована на бизнес-результат: больше заявок, выше доверие, сильнее позиционирование и прозрачная управляемость проекта.',
+        srv1Li1: 'Позиционирование и ценностное сообщение.', srv1Li2: 'Архитектура страниц и контент-фрейм.', srv1Li3: 'KPI и карта клиентского пути.',
+        srv2Li1: 'Премиальный UI с адаптивной системой.', srv2Li2: 'Семантическая разработка и интеграции.', srv2Li3: 'Формы, квизы, калькуляторы, CTA-механики.',
+        srv3Li1: 'Metadata, Open Graph и schema.org.', srv3Li2: 'Core Web Vitals и скорость рендера.', srv3Li3: 'Аналитика, воронка и post-launch итерации.',
+        fitTitle: 'Кому подойдёт такой формат', fitLi1: 'Экспертам и студиям, которым нужен визуально сильный и конверсионный сайт.', fitLi2: 'B2B-командам, которым важны структура, масштабируемость и SEO-фундамент.', fitLi3: 'Брендам, которые хотят продавать дороже за счёт уровня подачи и доверия.',
+        notFitTitle: 'Когда лучше выбрать другой путь', notFitLi1: 'Если нужен «быстрый сайт на шаблоне» без стратегии и аналитики.', notFitLi2: 'Если приоритет — минимальная цена, а не качество, скорость и масштаб.', notFitLi3: 'Если команда не готова к регулярным согласованиям и работе по KPI.',
+        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
-      'services.html': {
-        ru: { id: 'servicesTitle', text: 'Сервисная модель полного цикла: от позиционирования до стабильного потока лидов' },
-        en: { id: 'servicesTitle', text: 'Full-cycle service model: from positioning to consistent lead generation' }
+      en: {
+        servicesBadge: 'Capability Stack', servicesTitle: 'Full cycle: strategy, design, development, SEO, and post-launch growth',
+        servicesLead: 'Every service is outcome-driven: more leads, stronger trust, sharper positioning, and transparent project control.',
+        srv1Li1: 'Positioning and value messaging.', srv1Li2: 'Page architecture and content framework.', srv1Li3: 'KPI map and customer journey model.',
+        srv2Li1: 'Premium UI with responsive design system.', srv2Li2: 'Semantic development and integrations.', srv2Li3: 'Forms, quizzes, estimators, and CTA mechanics.',
+        srv3Li1: 'Metadata, Open Graph, and schema.org.', srv3Li2: 'Core Web Vitals and render performance.', srv3Li3: 'Analytics, funnel insights, and post-launch iterations.',
+        fitTitle: 'Who this format is perfect for', fitLi1: 'Experts and studios who need a visually strong and conversion-ready website.', fitLi2: 'B2B teams that need structure, scalability, and a solid SEO foundation.', fitLi3: 'Brands that want to sell at a higher value through premium presentation and trust.',
+        notFitTitle: 'When to choose a different path', notFitLi1: 'If you need a quick template website without strategy or analytics.', notFitLi2: 'If lowest price matters more than quality, speed, and scalability.', notFitLi3: 'If your team is not ready for regular approvals and KPI-based process.',
+        footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
+      }
+    },
+    development: {
+      ru: {
+        devBadge: 'Система реализации', devTitle: 'Прозрачный production-процесс с жёсткой связкой к KPI',
+        devLead: 'Каждая фаза завершается конкретным артефактом: вы видите результат, понимаете следующий шаг и контролируете качество без хаоса.',
+        devP1Title: '1. Discovery', devP1Text: 'Анализ ниши, ЦА, конкурентов, контент-рисков и KPI. На выходе — стратегический бриф.',
+        devP2Title: '2. IA & UX', devP2Text: 'Сценарии пользователя, структура страниц, карта контента и точки доверия.',
+        devP3Title: '3. Visual Direction', devP3Text: 'Премиальная визуальная система, UI-компоненты, типографика и motion-принципы.',
+        devP4Title: '4. Development', devP4Text: 'Семантическая сборка, формы, интеграции, анимации, скорость и адаптивность.',
+        devP5Title: '5. SEO & Launch', devP5Text: 'Metadata, schema, QA, аналитика, релиз и 90-дневный backlog роста.',
+        devQualityTitle: 'Контроль качества на каждом этапе',
+        devQualityLi1: 'Каждая фаза включает демонстрацию, фиксацию решений и короткий протокол.',
+        devQualityLi2: 'Все ключевые страницы проходят техническую и UX-проверку до релиза.',
+        devQualityLi3: 'После запуска формируется список growth-гипотез на основе данных.',
+        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
-      'pricing.html': {
-        ru: { id: 'pricingTitle', text: 'Прозрачная стоимость: выбирайте формат проекта и получайте прогноз по срокам' },
-        en: { id: 'pricingTitle', text: 'Transparent pricing: choose project format and get a realistic timeline estimate' }
+      en: {
+        devBadge: 'Execution System', devTitle: 'Transparent production workflow with KPI-level discipline',
+        devLead: 'Each phase ends with a concrete artifact: clear result, clear next step, and quality control without chaos.',
+        devP1Title: '1. Discovery', devP1Text: 'Market, audience, competitors, content risks, and KPI audit. Output: strategic brief.',
+        devP2Title: '2. IA & UX', devP2Text: 'User scenarios, page structure, content map, and trust points.',
+        devP3Title: '3. Visual Direction', devP3Text: 'Premium visual system, UI components, typography, and motion principles.',
+        devP4Title: '4. Development', devP4Text: 'Semantic build, forms, integrations, animation, performance, and responsiveness.',
+        devP5Title: '5. SEO & Launch', devP5Text: 'Metadata, schema, QA, analytics setup, launch, and a 90-day growth backlog.',
+        devQualityTitle: 'Quality control in every phase',
+        devQualityLi1: 'Every phase includes demo, decision log, and short protocol.',
+        devQualityLi2: 'All key pages pass technical and UX validation before release.',
+        devQualityLi3: 'Post-launch growth hypotheses are built on real data.',
+        footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
+      }
+    },
+    info: {
+      ru: {
+        infoBadge: 'Доверие и коммуникация', infoTitle: 'Прямая коммуникация, прозрачные условия и поддержка после запуска',
+        infoLegal: 'Статус: самозанятый. По запросу предоставляются договор, чек и закрывающие документы.',
+        infoModelTitle: 'Модель сотрудничества', infoModelLi1: 'Фиксация scope, сроков и KPI перед стартом.', infoModelLi2: 'Этапная приёмка и понятные deliverables.', infoModelLi3: 'Поддержка и итерационное улучшение после релиза.',
+        infoNeedTitle: 'Что потребуется от вас', infoNeedLi1: 'Краткий бриф по продукту и аудитории.', infoNeedLi2: 'Приоритеты: лиды, имидж, SEO и автоматизация.', infoNeedLi3: 'Доступность для 1–2 согласований в неделю.',
+        infoNextTitle: 'Следующий шаг', infoNextText: 'Напишите в Telegram или на email. В ответ вы получите структуру запуска проекта, список исходных материалов и ориентир по срокам в течение 24 часов.',
+        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
       },
-      'info.html': {
-        ru: { id: 'infoTitle', text: 'Прямая коммуникация, прозрачные условия и поддержка после запуска' },
-        en: { id: 'infoTitle', text: 'Direct communication, transparent terms, and support after launch' }
+      en: {
+        infoBadge: 'Trust & Communication', infoTitle: 'Direct communication, transparent terms, and support after launch',
+        infoLegal: 'Status: self-employed. Contract, receipt, and closing documents are available on request.',
+        infoModelTitle: 'Collaboration Model', infoModelLi1: 'Scope, timeline, and KPI are fixed before project start.', infoModelLi2: 'Phase-based acceptance with clear deliverables.', infoModelLi3: 'Support and iterative improvements after release.',
+        infoNeedTitle: 'What I need from you', infoNeedLi1: 'A brief on your product and audience.', infoNeedLi2: 'Priorities: leads, brand image, SEO, and automation.', infoNeedLi3: 'Availability for 1–2 approval sessions per week.',
+        infoNextTitle: 'Next step', infoNextText: 'Message me on Telegram or email. You will receive the launch structure, required source materials, and timeline estimate within 24 hours.',
+        footerLead: 'Independent Web Product Designer & Developer. Premium websites with transparent process and measurable outcomes.'
       }
     }
   };
@@ -127,23 +188,20 @@
   };
 
   const applyCommonLang = (lang) => {
-    currentLang = lang;
+    const dict = dictionaries.common[lang] || dictionaries.common.ru;
     document.documentElement.lang = lang;
     document.body.setAttribute('data-lang', lang);
 
-    const dict = translations.common[lang] || translations.common.ru;
-    const navProcess = document.querySelectorAll('a[href="development.html"]');
-    const navServices = document.querySelectorAll('a[href="services.html"]');
-    const navPricing = document.querySelectorAll('a[href="pricing.html"]');
-    const navContact = document.querySelectorAll('a[href="info.html"]');
-
-    navProcess.forEach((n) => { n.textContent = dict.navProcess; });
-    navServices.forEach((n) => { n.textContent = dict.navServices; });
-    navPricing.forEach((n) => { n.textContent = dict.navPricing; });
-    navContact.forEach((n) => { n.textContent = dict.navContact; });
+    document.querySelectorAll('a[href="development.html"]').forEach((n) => { n.textContent = dict.navProcess; });
+    document.querySelectorAll('a[href="services.html"]').forEach((n) => { n.textContent = dict.navServices; });
+    document.querySelectorAll('a[href="pricing.html"]').forEach((n) => { n.textContent = dict.navPricing; });
+    document.querySelectorAll('a[href="info.html"]').forEach((n) => { n.textContent = dict.navContact; });
 
     const skip = document.querySelector('.skip-link');
     if (skip) skip.textContent = dict.skip;
+
+    setText('footerSectionsTitle', dict.footerSectionsTitle);
+    setText('footerContactTitle', dict.footerContactTitle);
 
     const langBtn = document.getElementById('langToggle');
     if (langBtn) {
@@ -156,17 +214,11 @@
   };
 
   const applyPageLang = (lang) => {
-    if (pageKey === 'index.html') {
-      const dict = translations.index[lang] || translations.index.ru;
-      Object.entries(dict).forEach(([id, text]) => setText(id, text));
-    }
-
-    const pageTitle = translations.pageTitles[pageKey]?.[lang];
-    if (pageTitle) setText(pageTitle.id, pageTitle.text);
-
-    if (pageKey === 'pricing.html') {
-      updateEstimate();
-    }
+    const pageName = pageKey.replace('.html', '');
+    const pageDict = dictionaries[pageName]?.[lang] || dictionaries[pageName]?.ru;
+    if (!pageDict) return;
+    Object.entries(pageDict).forEach(([id, text]) => setText(id, text));
+    if (pageKey === 'pricing.html') updateEstimate(lang);
   };
 
   const applyLang = (lang) => {
@@ -183,13 +235,13 @@
   const deadline = document.getElementById('deadline');
   const deadlineOutput = document.getElementById('deadlineOutput');
 
-  const formatCurrency = (value) => (currentLang === 'en'
+  const formatCurrency = (value, lang) => (lang === 'en'
     ? `$${Math.round(value / 95).toLocaleString('en-US')}`
     : `${Number(value).toLocaleString('ru-RU')} ₽`);
 
   const getBaseValue = () => Number(Array.from(projectTypeOptions).find((item) => item.checked)?.value || 0);
 
-  function updateEstimate() {
+  function updateEstimate(lang = safeGet(langKey, 'ru')) {
     const estimateValue = document.getElementById('estimateValue');
     const estimateTimeline = document.getElementById('estimateTimeline');
     const complexityValue = document.getElementById('complexityValue');
@@ -207,33 +259,27 @@
     const urgentMultiplier = deadlineWeeks <= 3 ? 1.25 : deadlineWeeks <= 5 ? 1.1 : 1;
     const total = Math.round((base + pageExtra + addonsTotal) * urgentMultiplier / 1000) * 1000;
 
-    estimateValue.textContent = formatCurrency(total);
+    estimateValue.textContent = formatCurrency(total, lang);
     if (pageCountOutput) pageCountOutput.value = String(pages);
-    if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${currentLang === 'en' ? 'weeks' : 'недель'}`;
-    if (estimateTimeline) estimateTimeline.textContent = `${Math.max(2, Math.round(pages / 3))}–${Math.max(4, Math.round(pages / 2))} ${currentLang === 'en' ? 'weeks' : 'недель'}`;
+    if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${lang === 'en' ? 'weeks' : 'недель'}`;
+    if (estimateTimeline) estimateTimeline.textContent = `${Math.max(2, Math.round(pages / 3))}–${Math.max(4, Math.round(pages / 2))} ${lang === 'en' ? 'weeks' : 'недель'}`;
 
     const complexity = Math.min(100, Math.round(base / 1500 + pages * 2 + addonsTotal / 1800));
-    if (complexityValue) {
-      if (currentLang === 'en') {
-        complexityValue.textContent = complexity < 40 ? 'Basic' : complexity < 70 ? 'Medium' : 'High';
-      } else {
-        complexityValue.textContent = complexity < 40 ? 'Базовый' : complexity < 70 ? 'Средний' : 'Высокий';
-      }
-    }
+    if (complexityValue) complexityValue.textContent = lang === 'en'
+      ? (complexity < 40 ? 'Basic' : complexity < 70 ? 'Medium' : 'High')
+      : (complexity < 40 ? 'Базовый' : complexity < 70 ? 'Средний' : 'Высокий');
     if (complexityMeter) complexityMeter.style.width = `${complexity}%`;
 
     if (estimateLabel && timelineLabel && complexityLabel) {
-      estimateLabel.childNodes[0].textContent = currentLang === 'en' ? 'Total: ' : 'Итого: ';
-      timelineLabel.childNodes[0].textContent = currentLang === 'en' ? 'Timeline: ' : 'Срок: ';
-      complexityLabel.childNodes[0].textContent = currentLang === 'en' ? 'Complexity: ' : 'Сложность: ';
+      estimateLabel.childNodes[0].textContent = lang === 'en' ? 'Total: ' : 'Итого: ';
+      timelineLabel.childNodes[0].textContent = lang === 'en' ? 'Timeline: ' : 'Срок: ';
+      complexityLabel.childNodes[0].textContent = lang === 'en' ? 'Complexity: ' : 'Сложность: ';
     }
 
     if (estimateBreakdown) {
-      if (currentLang === 'en') {
-        estimateBreakdown.innerHTML = `<li>Base: ${formatCurrency(base)}</li><li>Scale: ${formatCurrency(pageExtra)}</li><li>Add-ons: ${formatCurrency(addonsTotal)}</li>`;
-      } else {
-        estimateBreakdown.innerHTML = `<li>База: ${formatCurrency(base)}</li><li>Масштаб: ${formatCurrency(pageExtra)}</li><li>Опции: ${formatCurrency(addonsTotal)}</li>`;
-      }
+      estimateBreakdown.innerHTML = lang === 'en'
+        ? `<li>Base: ${formatCurrency(base, lang)}</li><li>Scale: ${formatCurrency(pageExtra, lang)}</li><li>Add-ons: ${formatCurrency(addonsTotal, lang)}</li>`
+        : `<li>База: ${formatCurrency(base, lang)}</li><li>Масштаб: ${formatCurrency(pageExtra, lang)}</li><li>Опции: ${formatCurrency(addonsTotal, lang)}</li>`;
     }
   }
 
@@ -256,12 +302,11 @@
     typeCards.forEach((card) => card.classList.toggle('active', Boolean(card.querySelector('input')?.checked)));
     updateEstimate();
   }));
-  addOns.forEach((addon) => addon.addEventListener('change', updateEstimate));
-  pageCount?.addEventListener('input', updateEstimate);
-  deadline?.addEventListener('input', updateEstimate);
+  addOns.forEach((addon) => addon.addEventListener('change', () => updateEstimate()));
+  pageCount?.addEventListener('input', () => updateEstimate());
+  deadline?.addEventListener('input', () => updateEstimate());
   updateEstimate();
 
-  const revealItems = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -269,5 +314,5 @@
       obs.unobserve(entry.target);
     });
   }, { threshold: 0.12 });
-  revealItems.forEach((item) => revealObserver.observe(item));
+  document.querySelectorAll('.reveal').forEach((item) => revealObserver.observe(item));
 })();

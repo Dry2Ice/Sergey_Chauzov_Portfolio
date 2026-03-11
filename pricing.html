@@ -24,53 +24,95 @@
 
   <main>
     <section class="container hero reveal">
-      <p class="badge">Transparent Pricing Model</p>
-      <h1 id="pricingTitle">Прозрачная стоимость: выбирайте формат проекта и получайте прогноз по срокам</h1>
-      <p class="lead">Ниже — ориентир по пакетам и динамический калькулятор. Итоговая смета фиксируется после брифа и согласования scope.</p>
+      <p id="pricingBadge" class="badge">Прозрачная модель стоимости</p>
+      <h1 id="pricingTitle">Три масштаба проекта + интерактивный калькулятор бюджета</h1>
+      <p id="pricingLead" class="lead">Выберите ориентир по уровню проекта, затем настройте калькулятор и получите прогноз по стоимости, сроку и сложности.</p>
     </section>
 
-    <section class="container grid three">
-      <article class="card pricing-card reveal"><h2>Start</h2><p class="price">от 25 000 ₽</p><ul><li>Лендинг / MVP</li><li>Базовая SEO-структура</li><li>Запуск за 2–4 недели</li></ul></article>
-      <article class="card pricing-card featured reveal"><h2>Growth</h2><p class="price">от 45 000 ₽</p><ul><li>Сайт услуг / корпоративный</li><li>Аналитика + события</li><li>Рост по этапам</li></ul></article>
-      <article class="card pricing-card reveal"><h2>Scale</h2><p class="price">от 105 000 ₽</p><ul><li>Сложные сценарии и интеграции</li><li>Кастомные модули</li><li>Техподдержка и SLA</li></ul></article>
-    </section>
-
-    <section class="container grid two">
-      <article class="card reveal">
-        <h2>Калькулятор бюджета</h2>
-        <label for="pageCount">Количество страниц</label>
-        <div class="range-label"><input id="pageCountOutput" value="6" readonly /><input id="deadlineOutput" value="5 недель" readonly /></div>
-        <input id="pageCount" type="range" min="1" max="30" value="6" />
-
-        <label for="deadline">Желаемый дедлайн</label>
-        <input id="deadline" type="range" min="2" max="12" value="5" />
-
-        <div class="type-cards" id="projectTypeCards">
-          <label class="type-card active"><input type="radio" name="projectType" value="25000" checked /><strong>Landing</strong></label>
-          <label class="type-card"><input type="radio" name="projectType" value="45000" /><strong>Corporate</strong></label>
-        </div>
-
-        <label class="addon-item"><input type="checkbox" class="calc-addon" value="12000" /> CRM integration</label>
-        <label class="addon-item"><input type="checkbox" class="calc-addon" value="8000" /> Copywriting support</label>
-        <label class="addon-item"><input type="checkbox" class="calc-addon" value="15000" /> Advanced animation</label>
-
-        <p id="estimateLabel" class="estimate">Итого: <strong id="estimateValue">25 000 ₽</strong></p>
-        <p id="timelineLabel" class="timeline">Срок: <strong id="estimateTimeline">4–5 недель</strong></p>
-        <p id="complexityLabel" class="complexity">Сложность: <strong id="complexityValue">Базовый</strong></p>
-        <div class="complexity-bar"><span id="complexityMeter"></span></div>
-        <ul id="estimateBreakdown" class="estimate-breakdown"></ul>
+    <section class="container grid three reveal">
+      <article class="card pricing-card">
+        <h2>Start</h2>
+        <p class="price">от 25 000 ₽</p>
+        <ul><li id="priceStart1">Лендинг / MVP</li><li id="priceStart2">Базовая SEO-структура</li><li id="priceStart3">Запуск за 2–4 недели</li></ul>
       </article>
+      <article class="card pricing-card featured">
+        <h2>Growth</h2>
+        <p class="price">от 45 000 ₽</p>
+        <ul><li id="priceGrowth1">Сайт услуг / корпоративный</li><li id="priceGrowth2">Аналитика + события</li><li id="priceGrowth3">Рост по этапам</li></ul>
+      </article>
+      <article class="card pricing-card">
+        <h2>Scale</h2>
+        <p class="price">от 105 000 ₽</p>
+        <ul><li id="priceScale1">Сложные сценарии и интеграции</li><li id="priceScale2">Кастомные модули</li><li id="priceScale3">Техподдержка и SLA</li></ul>
+      </article>
+    </section>
 
-      <article class="card reveal">
-        <h2>Как оптимизировать бюджет</h2>
+    <section class="container reveal">
+      <article class="card estimator-shell">
+        <div class="estimator-head">
+          <h2 id="calcTitle">Калькулятор бюджета</h2>
+          <p id="calcLead" class="section-lead">Блок построен как быстрый пресейл-инструмент: вы сразу видите ориентир и структуру сметы.</p>
+        </div>
+        <div class="estimator-grid">
+          <div class="estimator-form">
+            <label id="calcPagesLabel" for="pageCount">Количество страниц</label>
+            <div class="range-label"><input id="pageCountOutput" value="6" readonly /><input id="deadlineOutput" value="5 недель" readonly /></div>
+            <input id="pageCount" type="range" min="1" max="30" value="6" />
+
+            <label id="calcDeadlineLabel" for="deadline">Желаемый дедлайн</label>
+            <input id="deadline" type="range" min="2" max="12" value="5" />
+
+            <div class="type-cards" id="projectTypeCards">
+              <label class="type-card active"><input type="radio" name="projectType" value="25000" checked /><strong>Landing</strong></label>
+              <label class="type-card"><input type="radio" name="projectType" value="45000" /><strong>Corporate</strong></label>
+              <label class="type-card"><input type="radio" name="projectType" value="105000" /><strong>Scale+</strong></label>
+            </div>
+
+            <label class="addon-item"><input type="checkbox" class="calc-addon" value="12000" /> CRM integration</label>
+            <label class="addon-item"><input type="checkbox" class="calc-addon" value="8000" /> Copywriting support</label>
+            <label class="addon-item"><input type="checkbox" class="calc-addon" value="15000" /> Advanced animation</label>
+          </div>
+
+          <aside class="estimator-summary" aria-live="polite">
+            <p id="estimateLabel" class="estimate">Итого: <strong id="estimateValue">25 000 ₽</strong></p>
+            <p id="timelineLabel" class="timeline">Срок: <strong id="estimateTimeline">4–5 недель</strong></p>
+            <p id="complexityLabel" class="complexity">Сложность: <strong id="complexityValue">Базовый</strong></p>
+            <div class="complexity-bar"><span id="complexityMeter"></span></div>
+            <ul id="estimateBreakdown" class="estimate-breakdown"></ul>
+            <a id="pricingCta" class="btn btn-primary" href="info.html">Обсудить проект</a>
+          </aside>
+        </div>
+      </article>
+    </section>
+
+    <section class="container grid one reveal">
+      <article class="card">
+        <h2 id="optTitle">Как оптимизировать бюджет без потери качества</h2>
         <ul>
-          <li>Запустить MVP на ключевые сценарии и масштабировать в спринтах.</li>
-          <li>Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.</li>
-          <li>Использовать единый дизайн-сет вместо хаотичных правок по блокам.</li>
-          <li>Согласовывать контент заранее — это заметно ускоряет релиз.</li>
+          <li id="optLi1">Запустить MVP на ключевые сценарии и масштабировать в спринтах.</li>
+          <li id="optLi2">Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.</li>
+          <li id="optLi3">Использовать единую дизайн-систему вместо хаотичных правок по блокам.</li>
+          <li id="optLi4">Согласовывать контент заранее — это заметно ускоряет релиз.</li>
         </ul>
       </article>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Sergey Chauzov</strong>
+        <p id="footerLead" class="footer-meta">Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.</p>
+      </div>
+      <div>
+        <strong id="footerSectionsTitle">Разделы</strong>
+        <p class="footer-meta"><a href="development.html">Процесс</a> · <a href="services.html">Услуги</a> · <a href="pricing.html">Пакеты</a></p>
+      </div>
+      <div>
+        <strong id="footerContactTitle">Контакты</strong>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
