@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main-content">Перейти к контенту</a>
   <header class="header">
     <div class="container topbar">
@@ -27,26 +27,24 @@
         <a class="nav-link" href="development.html">Процесс</a>
         <a class="nav-link" href="services.html">Услуги</a>
       </nav>
-      <a class="center-logo" href="index.html" aria-label="На главную">
-        <img src="smalllogo.svg" class="small-logo" alt="Логотип Sergey Chauzov" />
-      </a>
+      <div class="center-logo center-logo-placeholder" aria-hidden="true"></div>
       <nav class="nav" aria-label="Навигация справа">
         <a class="nav-link" href="pricing.html">Пакеты</a>
         <a class="nav-link" href="info.html">Контакты</a>
       </nav>
-            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
       <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
 
   <main id="main-content">
     <section class="container hero hero-cinematic reveal">
-      <div>
-        <div class="hero-brand">
-          <img src="logo.svg" class="hero-brandmark" alt="Полный логотип Sergey Chauzov" />
-          <p id="heroBadge" class="badge">Разработка сайтов • Доработка • Исправление ошибок</p>
-        </div>
-        <h1 id="heroTitle">Создаю сайты с нуля, усиливаю действующие проекты и быстро исправляю критичные ошибки</h1>
+      <div class="hero-brand">
+        <img src="logo.svg" class="hero-brandmark site-logo-transition" alt="Полный логотип Sergey Chauzov" />
+        <p id="heroBadge" class="hero-brandline">Разработка сайтов • Доработка • Исправление ошибок</p>
+      </div>
+      <h1 id="heroTitle">Создаю сайты с нуля, усиливаю действующие проекты и быстро исправляю критичные ошибки</h1>
+      <div class="hero-copy">
         <p id="heroLead" class="lead">Помогаю бизнесу запускать и развивать сайты без лишней бюрократии: продумываю структуру, собираю интерфейс и логику, подключаю интеграции, ускоряю загрузку и довожу проект до стабильной работы. Вы общаетесь напрямую с исполнителем и на каждом этапе понимаете, что делается и зачем.</p>
         <div class="cta-row">
           <a id="ctaMain" class="btn btn-primary" href="pricing.html">Рассчитать стоимость</a>

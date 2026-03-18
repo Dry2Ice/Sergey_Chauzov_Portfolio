@@ -23,6 +23,15 @@
     const node = document.getElementById(id);
     if (node) node.textContent = value;
   };
+  const initLogoTransition = () => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const logos = Array.from(document.querySelectorAll('.site-logo-transition'));
+    logos.forEach((logo, index) => {
+      if (!(logo instanceof HTMLElement)) return;
+      logo.style.viewTransitionName = !reduced && index === 0 ? 'site-logo' : 'none';
+    });
+  };
+
 
   const dictionaries = {
     common: {
@@ -318,6 +327,7 @@
     }
   }
 
+  initLogoTransition();
   applyTheme(safeGet(themeKey, 'light'));
   applyLang(safeGet(langKey, 'ru'));
 
