@@ -19,6 +19,7 @@
       </nav>
       <div class="header-right">
         <img class="small-logo" src="smalllogo.svg" alt="Логотип Sergey Chauzov" />
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
         <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
       </div>
     </div>
@@ -33,7 +34,7 @@
 
     <section class="container grid three pricing-grid">
       <article class="card pricing-card reveal">
-        <h2>Start</h2>
+        <h2>Старт</h2>
         <p class="price">от <strong>25 000 ₽</strong></p>
         <ul>
           <li>Лендинг/визитка, до 5 блоков.</li>
@@ -43,7 +44,7 @@
       </article>
       <article class="card pricing-card featured reveal">
         <p class="chip">Оптимальный</p>
-        <h2>Growth</h2>
+        <h2>Рост</h2>
         <p class="price">от <strong>45 000 ₽</strong></p>
         <ul>
           <li>Корпоративный сайт до 15 страниц.</li>
@@ -52,7 +53,7 @@
         </ul>
       </article>
       <article class="card pricing-card reveal">
-        <h2>Scale</h2>
+        <h2>Масштаб</h2>
         <p class="price">от <strong>105 000 ₽</strong></p>
         <ul>
           <li>Платформа с ролями, API и кабинетами.</li>
@@ -95,12 +96,12 @@
                 </label>
                 <label class="type-card">
                   <input type="radio" name="projectType" value="80000" data-label="Интернет-магазин" />
-                  <strong>E-commerce</strong>
+                  <strong>Интернет-магазин</strong>
                   <span>каталог, корзина, оплата и CRM</span>
                 </label>
                 <label class="type-card">
                   <input type="radio" name="projectType" value="105000" data-label="Веб-платформа / SaaS" />
-                  <strong>SaaS / Платформа</strong>
+                  <strong>SaaS / платформа</strong>
                   <span>кабинеты, роли, API и логика</span>
                 </label>
               </div>
@@ -150,7 +151,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Sergey Chauzov</strong>
-        <p class="footer-meta">Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.</p>
+        <p class="footer-meta">Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.</p>
       </div>
       <div>
         <strong>Разделы</strong>
@@ -158,9 +159,26 @@
       </div>
       <div>
         <strong>Контакты</strong>
-        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Эл. почта: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
   </footer>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" aria-hidden="true">
+    <button class="mobile-nav-backdrop" type="button" data-menu-close tabindex="-1" aria-hidden="true"></button>
+    <div class="mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+      <div class="mobile-nav-head">
+        <p class="mobile-nav-caption">Прайс и кейс</p>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="presentation.html">Презентация</a>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Возможности</a>
+        <a href="example.html">Прайс и кейс</a>
+        <a href="info.html">Контакты</a>
+      </div>
+    </div>
+  </nav>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
 </body>
 </html>

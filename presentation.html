@@ -19,6 +19,7 @@
       </nav>
       <div class="header-right">
         <img class="small-logo" src="smalllogo.svg" alt="Логотип Sergey Chauzov" />
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
         <button id="themeToggle" class="theme-btn" aria-label="Сменить тему">🌓</button>
       </div>
     </div>
@@ -27,8 +28,8 @@
   <main>
     <section class="container cinematic-hero reveal">
       <div class="hero-orb"></div>
-      <p class="badge">Cinematic Web Experience • Portfolio Edition</p>
-      <h1 class="split-title">Сайт-презентация в эстетике крупного digital-проекта</h1>
+      <p class="badge">Кинематографичный веб-опыт • Портфолио-версия</p>
+      <h1 class="split-title">Сайт-презентация в эстетике крупного цифрового проекта</h1>
       <p>
         Это отдельная презентационная страница в формате «трейлера»: визуальная драматургия,
         мягкая анимация и фокус на впечатление. Подходит, когда нужно сразу показать класс,
@@ -42,21 +43,21 @@
 
     <section class="container poster-grid reveal">
       <article class="poster-card">
-        <h2>Act I — First Contact</h2>
+        <h2>Акт I — Первое касание</h2>
         <p>Визуальный крючок, читаемый оффер и атмосфера «дорогого продукта» с первых секунд.</p>
       </article>
       <article class="poster-card">
-        <h2>Act II — Storyline</h2>
+        <h2>Акт II — Сюжет</h2>
         <p>Структура как у трейлера: интрига, раскрытие возможностей, понятная ценность для клиента.</p>
       </article>
       <article class="poster-card">
-        <h2>Act III — Conversion</h2>
+        <h2>Акт III — Конверсия</h2>
         <p>Красивый финал с понятным следующим шагом: заявка, звонок, бриф или демо.</p>
       </article>
     </section>
 
     <section class="container card reveal marquee-block">
-      <p class="marquee">PREMIUM VISUALS • NEXT-GEN STORYTELLING • ACCESSIBLE DEVELOPMENT • PREMIUM VISUALS • NEXT-GEN STORYTELLING • ACCESSIBLE DEVELOPMENT</p>
+      <p class="marquee">ПРЕМИАЛЬНЫЙ ВИЗУАЛ • СИЛЬНАЯ ПОДАЧА • ДОСТУПНАЯ РАЗРАБОТКА • ПРЕМИАЛЬНЫЙ ВИЗУАЛ • СИЛЬНАЯ ПОДАЧА • ДОСТУПНАЯ РАЗРАБОТКА</p>
     </section>
   </main>
 
@@ -64,7 +65,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Sergey Chauzov</strong>
-        <p class="footer-meta">Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.</p>
+        <p class="footer-meta">Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.</p>
       </div>
       <div>
         <strong>Разделы</strong>
@@ -72,9 +73,26 @@
       </div>
       <div>
         <strong>Контакты</strong>
-        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Эл. почта: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
   </footer>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" aria-hidden="true">
+    <button class="mobile-nav-backdrop" type="button" data-menu-close tabindex="-1" aria-hidden="true"></button>
+    <div class="mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+      <div class="mobile-nav-head">
+        <p class="mobile-nav-caption">Презентация</p>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="presentation.html">Презентация</a>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Возможности</a>
+        <a href="example.html">Прайс и кейс</a>
+        <a href="info.html">Контакты</a>
+      </div>
+    </div>
+  </nav>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
 </body>
 </html>

@@ -39,25 +39,25 @@
     },
     index: {
       ru: {
-        heroBadge: 'Cinematic Product Design • Engineering • SEO',
-        heroTitle: 'Сайты, которые выглядят как искусство и работают как системный канал продаж',
-        heroLead: 'Я проектирую цифровые продукты с кинематографичной подачей, инженерной дисциплиной и сильной SEO-архитектурой. Вы получаете визуальный вау-эффект, измеримые бизнес-метрики и прямую связь без посредников.',
+        heroBadge: 'Fullstack-разработка сайтов • Улучшение • Исправление ошибок',
+        heroTitle: 'Я — Сергей Чаузов, fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие и исправляю ошибки',
+        heroLead: 'Я разрабатываю сайты под ключ: собираю интерфейсы и серверную логику, ускоряю работу проекта, исправляю ошибки, усиливаю SEO и довожу сайт до стабильного результата. Вы получаете одного технического исполнителя без посредников.',
         ctaMain: 'Рассчитать бюджет проекта', ctaProcess: 'Посмотреть 6-фазный процесс',
-        heroPanelTitle: 'Система исполнения',
-        heroCheck1: 'Первая рабочая версия за 24–72 часа.', heroCheck2: 'Чёткая архитектура под масштаб и новые языки.', heroCheck3: 'KPI-фреймворк: скорость, конверсия, заявки.',
+        heroPanelTitle: 'Что вы получаете',
+        heroCheck1: 'Первая рабочая версия или точечные правки за 24–72 часа.', heroCheck2: 'Доработку интерфейса, логики, интеграций и исправление ошибок в одном цикле.', heroCheck3: 'Понятные KPI: скорость, конверсия, заявки и техническая стабильность.',
         kpi1v: '24–72 часа', kpi1t: 'до первой рабочей итерации', kpi2v: '90+ Lighthouse', kpi2t: 'при корректной контент-стратегии',
-        kpi3v: '1 окно связи', kpi3t: 'без менеджерской прослойки', kpi4v: '6 фаз', kpi4t: 'от стратегии до запуска и роста',
-        workTitle: 'Избранные направления, где сайт даёт бизнес-результат',
-        workCard1Tag: 'Услуги', workCard1Title: 'Коммерческие сайты услуг', workCard1Text: 'Структура под лидогенерацию: оффер, доказательства, CTA, автоворонка и аналитика.',
-        workCard2Tag: 'Бренд', workCard2Title: 'Имиджевые бренд-платформы', workCard2Text: 'Эстетика премиум-сегмента с высокой скоростью и технологической чистотой.',
-        workCard3Tag: 'Масштаб', workCard3Title: 'Масштабируемые продуктовые сайты', workCard3Text: 'Модульная система страниц, готовая к SEO-кластеру, кейсам и новым рынкам.',
-        caseTitle: 'Флагманский кейс', caseLead: 'Кейс-формат: задача → стратегия → внедрение → цифры. Это основа доверия и аргументации стоимости.', caseLinkLabel: 'Aplus Charisma — коммерческий сайт услуг', caseLinkCta: 'Открыть ↗',
+        kpi3v: '1 окно связи', kpi3t: 'без менеджерской прослойки', kpi4v: '6 фаз', kpi4t: 'от задачи до запуска и улучшений',
+        workTitle: 'Основные задачи, с которыми ко мне приходят',
+        workCard1Tag: 'Создание', workCard1Title: 'Новые сайты с нуля', workCard1Text: 'Лендинги, корпоративные сайты и спецпроекты с продуманной структурой и чистой fullstack-разработкой.',
+        workCard2Tag: 'Улучшение', workCard2Title: 'Доработка текущих сайтов', workCard2Text: 'Ускорение, переработка интерфейсов, усиление SEO-структуры и рост конверсии без хаоса.',
+        workCard3Tag: 'Исправление', workCard3Title: 'Исправление ошибок и сбоев', workCard3Text: 'Верстка, скрипты, формы, интеграции и нестабильные части сайта приводятся в рабочее состояние.',
+        caseTitle: 'Флагманский кейс', caseLead: 'Формат кейса: задача → стратегия → внедрение → цифры. Это помогает быстро понять подход к разработке и уровень ответственности.', caseLinkLabel: 'Aplus Charisma — коммерческий сайт услуг', caseLinkCta: 'Открыть ↗',
         resultTitle: 'Что вы получаете в результате',
-        resultLi1: 'Премиальный визуальный уровень с понятной иерархией и сильным CTA-потоком.', resultLi2: 'Семантически корректный HTML и SEO-базу с подготовкой к schema.org.',
-        resultLi3: 'Оптимизацию скорости, чтобы дизайн не ломал конверсию и индексацию.', resultLi4: 'Структуру, удобную для масштабирования: кейсы, контент, новые языковые версии.',
-        marqueeTitle: 'Стек и стандарты', marqueeLead: 'Подход и качество вдохновлены digital-практиками лидеров рынка.',
-        finalTitle: 'Готовы сделать сайт центром роста вашего бизнеса?', finalLead: 'Следующий шаг — короткий бриф, согласование KPI и запуск первой рабочей версии в ближайшие дни.',
-        finalCta1: 'Запустить проект', finalCta2: 'Связаться напрямую', footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+        resultLi1: 'Одного fullstack-исполнителя для интерфейса, серверной логики, интеграций и исправления ошибок.', resultLi2: 'Семантически корректный HTML, технически чистый код и SEO-базу с подготовкой к schema.org.',
+        resultLi3: 'Оптимизацию скорости и устранение узких мест, чтобы сайт работал стабильно и без сбоев.', resultLi4: 'Структуру, удобную для дальнейших доработок, масштабирования и новых разделов.',
+        marqueeTitle: 'Профессиональный стек', marqueeLead: 'Подход строится на сильной разработке, чистой архитектуре и работе с бизнес-метриками.',
+        finalTitle: 'Нужно создать сайт, доработать текущий или исправить ошибки?', finalLead: 'Опишите задачу — я предложу понятный план работ, сроки и приоритеты по запуску или доработке.',
+        finalCta1: 'Запустить проект', finalCta2: 'Связаться напрямую', footerLead: 'Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.'
       },
       en: {
         heroBadge: 'Cinematic Product Design • Engineering • SEO',
@@ -83,17 +83,17 @@
     },
     pricing: {
       ru: {
-        pricingBadge: 'Прозрачная модель стоимости', pricingTitle: 'Три масштаба проекта + продвинутый смарт-калькулятор',
-        pricingLead: 'Выберите уровень проекта и настройте параметры пресейла: дизайн, SEO, интеграции и дедлайн. Система покажет стоимость, срок и сложность.',
-        priceStart1: 'Лендинг / MVP', priceStart2: 'Базовая SEO-структура', priceStart3: 'Запуск за 2–4 недели',
-        priceGrowth1: 'Сайт услуг / корпоративный', priceGrowth2: 'Аналитика + события', priceGrowth3: 'Рост по этапам',
-        priceScale1: 'Сложные сценарии и интеграции', priceScale2: 'Кастомные модули', priceScale3: 'Техподдержка и SLA',
-        calcTitle: 'Продвинутый калькулятор бюджета', calcLead: 'Настройте параметры проекта как в реальном пресейле: объём, скорость, уровень дизайна, SEO и интеграции.',
-        calcPagesLabel: 'Количество страниц', calcDeadlineLabel: 'Желаемый дедлайн', calcDesignLabel: 'Уровень визуального продакшена', calcSeoLabel: 'SEO пакет', pricingCta: 'Обсудить проект',
+        pricingBadge: 'Прозрачная модель стоимости', pricingTitle: 'Три формата работы + продвинутый калькулятор бюджета',
+        pricingLead: 'Выберите формат: новый сайт, доработка или исправление ошибок. Настройте параметры и получите ориентир по стоимости, сроку и сложности.',
+        priceStart1: 'Лендинг / минимальный запуск', priceStart2: 'Базовая SEO-структура', priceStart3: 'Запуск за 2–4 недели',
+        priceGrowth1: 'Сайт услуг / корпоративный сайт', priceGrowth2: 'Аналитика и события', priceGrowth3: 'Рост по этапам',
+        priceScale1: 'Сложные сценарии и интеграции', priceScale2: 'Кастомные модули', priceScale3: 'Поддержка и SLA',
+        calcTitle: 'Продвинутый калькулятор бюджета', calcLead: 'Настройте проект как на реальном предварительном расчете: объём, скорость, уровень дизайна, SEO и интеграции.',
+        calcPagesLabel: 'Количество страниц', calcDeadlineLabel: 'Желаемый дедлайн', calcDesignLabel: 'Уровень визуального продакшена', calcSeoLabel: 'Пакет SEO', pricingCta: 'Обсудить проект',
         optTitle: 'Как оптимизировать бюджет без потери качества',
-        optLi1: 'Запустить MVP на ключевые сценарии и масштабировать в спринтах.', optLi2: 'Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.',
+        optLi1: 'Запустить минимальную рабочую версию на ключевые сценарии и масштабировать проект по этапам.', optLi2: 'Сначала внедрить основные страницы и лидогенерацию, затем расширять контент.',
         optLi3: 'Использовать единую дизайн-систему вместо хаотичных правок по блокам.', optLi4: 'Согласовывать контент заранее — это заметно ускоряет релиз.',
-        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+        footerLead: 'Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.'
       },
       en: {
         pricingBadge: 'Transparent Pricing Model', pricingTitle: 'Three project scales + advanced smart estimator',
@@ -111,14 +111,14 @@
     },
     services: {
       ru: {
-        servicesBadge: 'Стек компетенций', servicesTitle: 'Полный цикл: стратегия, дизайн, разработка, SEO и рост после релиза',
+        servicesBadge: 'Чем я могу помочь', servicesTitle: 'Fullstack-подход: создание сайтов, доработка, исправление ошибок и развитие',
         servicesLead: 'Каждая услуга ориентирована на бизнес-результат: больше заявок, выше доверие, сильнее позиционирование и прозрачная управляемость проекта.',
-        srv1Li1: 'Позиционирование и ценностное сообщение.', srv1Li2: 'Архитектура страниц и контент-фрейм.', srv1Li3: 'KPI и карта клиентского пути.',
-        srv2Li1: 'Премиальный UI с адаптивной системой.', srv2Li2: 'Семантическая разработка и интеграции.', srv2Li3: 'Формы, квизы, калькуляторы, CTA-механики.',
-        srv3Li1: 'Metadata, Open Graph и schema.org.', srv3Li2: 'Core Web Vitals и скорость рендера.', srv3Li3: 'Аналитика, воронка и post-launch итерации.',
-        fitTitle: 'Кому подойдёт такой формат', fitLi1: 'Экспертам и студиям, которым нужен визуально сильный и конверсионный сайт.', fitLi2: 'B2B-командам, которым важны структура, масштабируемость и SEO-фундамент.', fitLi3: 'Брендам, которые хотят продавать дороже за счёт уровня подачи и доверия.',
-        notFitTitle: 'Когда лучше выбрать другой путь', notFitLi1: 'Если нужен «быстрый сайт на шаблоне» без стратегии и аналитики.', notFitLi2: 'Если приоритет — минимальная цена, а не качество, скорость и масштаб.', notFitLi3: 'Если команда не готова к регулярным согласованиям и работе по KPI.',
-        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+        srv1Li1: 'Позиционирование и ценностное сообщение.', srv1Li2: 'Архитектура страниц и контент-каркас.', srv1Li3: 'KPI и карта клиентского пути.',
+        srv2Li1: 'Понятный интерфейс с адаптивной системой.', srv2Li2: 'Семантическая разработка и интеграции.', srv2Li3: 'Формы, квизы, калькуляторы и сценарии действия.',
+        srv3Li1: 'Метаданные, Open Graph и schema.org.', srv3Li2: 'Core Web Vitals и скорость рендеринга.', srv3Li3: 'Аналитика, воронка и доработки после запуска.',
+        fitTitle: 'Кому подойдёт такой формат', fitLi1: 'Экспертам и компаниям, которым нужен сильный сайт и надёжная fullstack-разработка.', fitLi2: 'B2B-командам, которым важны структура, масштабируемость и SEO-фундамент.', fitLi3: 'Брендам, которые хотят продавать дороже за счёт уровня подачи и доверия.',
+        notFitTitle: 'Когда лучше выбрать другой путь', notFitLi1: 'Если нужен быстрый шаблонный сайт без стратегии и аналитики.', notFitLi2: 'Если приоритет — минимальная цена, а не качество, скорость и масштаб.', notFitLi3: 'Если команда не готова к регулярным согласованиям и работе по KPI.',
+        footerLead: 'Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.'
       },
       en: {
         servicesBadge: 'Capability Stack', servicesTitle: 'Full cycle: strategy, design, development, SEO, and post-launch growth',
@@ -133,18 +133,18 @@
     },
     development: {
       ru: {
-        devBadge: 'Система реализации', devTitle: 'Прозрачный production-процесс с жёсткой связкой к KPI',
-        devLead: 'Каждая фаза завершается конкретным артефактом: вы видите результат, понимаете следующий шаг и контролируете качество без хаоса.',
-        devP1Title: '1. Discovery', devP1Text: 'Анализ ниши, ЦА, конкурентов, контент-рисков и KPI. На выходе — стратегический бриф.',
-        devP2Title: '2. IA & UX', devP2Text: 'Сценарии пользователя, структура страниц, карта контента и точки доверия.',
-        devP3Title: '3. Visual Direction', devP3Text: 'Премиальная визуальная система, UI-компоненты, типографика и motion-принципы.',
-        devP4Title: '4. Development', devP4Text: 'Семантическая сборка, формы, интеграции, анимации, скорость и адаптивность.',
-        devP5Title: '5. SEO & Launch', devP5Text: 'Metadata, schema, QA, аналитика, релиз и 90-дневный backlog роста.',
+        devBadge: 'Система работы', devTitle: 'Прозрачный процесс разработки, доработки и исправления ошибок с жёсткой связкой к KPI',
+        devLead: 'Каждая фаза завершается конкретным результатом: вы видите прогресс, понимаете следующий шаг и контролируете качество без хаоса.',
+        devP1Title: '1. Погружение', devP1Text: 'Анализ ниши, аудитории, конкурентов, контент-рисков и KPI. На выходе — стратегический бриф.',
+        devP2Title: '2. Структура и UX', devP2Text: 'Сценарии пользователя, структура страниц, карта контента и точки доверия.',
+        devP3Title: '3. Визуальное направление', devP3Text: 'Премиальная визуальная система, UI-компоненты, типографика и моушн-принципы.',
+        devP4Title: '4. Разработка', devP4Text: 'Семантическая сборка, формы, интеграции, анимации, скорость и адаптивность.',
+        devP5Title: '5. SEO и запуск', devP5Text: 'Метаданные, schema.org, проверка качества, аналитика, релиз и 90-дневный список гипотез роста.',
         devQualityTitle: 'Контроль качества на каждом этапе',
         devQualityLi1: 'Каждая фаза включает демонстрацию, фиксацию решений и короткий протокол.',
         devQualityLi2: 'Все ключевые страницы проходят техническую и UX-проверку до релиза.',
-        devQualityLi3: 'После запуска формируется список growth-гипотез на основе данных.',
-        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+        devQualityLi3: 'После запуска формируется список гипотез роста на основе данных.',
+        footerLead: 'Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.'
       },
       en: {
         devBadge: 'Execution System', devTitle: 'Transparent production workflow with KPI-level discipline',
@@ -163,12 +163,12 @@
     },
     info: {
       ru: {
-        infoBadge: 'Доверие и коммуникация', infoTitle: 'Прямая коммуникация, прозрачные условия и поддержка после запуска',
+        infoBadge: 'Доверие и коммуникация', infoTitle: 'Прямая коммуникация с fullstack-разработчиком и прозрачные условия работы',
         infoLegal: 'Статус: самозанятый. По запросу предоставляются договор, чек и закрывающие документы.',
-        infoModelTitle: 'Модель сотрудничества', infoModelLi1: 'Фиксация scope, сроков и KPI перед стартом.', infoModelLi2: 'Этапная приёмка и понятные deliverables.', infoModelLi3: 'Поддержка и итерационное улучшение после релиза.',
-        infoNeedTitle: 'Что потребуется от вас', infoNeedLi1: 'Краткий бриф по продукту и аудитории.', infoNeedLi2: 'Приоритеты: лиды, имидж, SEO и автоматизация.', infoNeedLi3: 'Доступность для 1–2 согласований в неделю.',
-        infoNextTitle: 'Следующий шаг', infoNextText: 'Напишите в Telegram или на email. В ответ вы получите структуру запуска проекта, список исходных материалов и ориентир по срокам в течение 24 часов.',
-        footerLead: 'Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.'
+        infoModelTitle: 'Модель сотрудничества', infoModelLi1: 'Фиксация объёма работ, сроков и KPI перед стартом.', infoModelLi2: 'Этапная приёмка и понятные результаты каждого этапа.', infoModelLi3: 'Поддержка и итерационное улучшение после релиза.',
+        infoNeedTitle: 'Что потребуется от вас', infoNeedLi1: 'Краткий бриф по продукту и аудитории.', infoNeedLi2: 'Приоритеты: заявки, имидж, SEO и автоматизация.', infoNeedLi3: 'Доступность для 1–2 согласований в неделю.',
+        infoNextTitle: 'Следующий шаг', infoNextText: 'Напишите в Telegram или на эл. почту. В ответ вы получите структуру запуска проекта, список исходных материалов и ориентир по срокам в течение 24 часов.',
+        footerLead: 'Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.'
       },
       en: {
         infoBadge: 'Trust & Communication', infoTitle: 'Direct communication, transparent terms, and support after launch',
@@ -272,14 +272,22 @@
     const complexityLabel = document.getElementById('complexityLabel');
     if (!estimateValue) return;
 
+    const formatWeeks = (min, max) => (min === max
+      ? `${max} ${lang === 'en' ? 'weeks' : 'недель'}`
+      : `${min}–${max} ${lang === 'en' ? 'weeks' : 'недель'}`);
+
     const base = getBaseValue();
     const pages = pageCount ? Number(pageCount.value) : 6;
-    const deadlineWeeks = deadline ? Number(deadline.value) : 6;
+    const deadlineBufferWeeks = deadline ? Number(deadline.value) : 2;
     const designCost = Number(designLevel?.value || 0);
     const seoCost = Number(seoPack?.value || 0);
     const pageExtra = Math.max(0, pages - 5) * 1500;
     const addonsTotal = Array.from(addOns).filter((a) => a.checked).reduce((sum, item) => sum + Number(item.value), 0);
-    const urgency = deadlineWeeks <= 3 ? 1.35 : deadlineWeeks <= 5 ? 1.18 : deadlineWeeks <= 7 ? 1.08 : 1;
+    const minTimeline = Math.max(2, Math.round(pages / 4) + (designCost > 0 ? 1 : 0));
+    const maxTimeline = Math.max(minTimeline + 1, Math.round(pages / 2) + (addonsTotal > 15000 ? 2 : 1));
+    const deadlineMin = minTimeline + deadlineBufferWeeks;
+    const deadlineMax = maxTimeline + deadlineBufferWeeks;
+    const urgency = deadlineBufferWeeks <= 0 ? 1.35 : deadlineBufferWeeks <= 1 ? 1.18 : deadlineBufferWeeks <= 2 ? 1.08 : 1;
     const subtotal = base + pageExtra + designCost + seoCost + addonsTotal;
     const total = Math.round(subtotal * urgency / 1000) * 1000;
 
@@ -287,10 +295,8 @@
     estimateValue.dataset.value = String(total);
     animateEstimateValue(estimateValue, prev, total, lang);
     if (pageCountOutput) pageCountOutput.value = String(pages);
-    if (deadlineOutput) deadlineOutput.value = `${deadlineWeeks} ${lang === 'en' ? 'weeks' : 'недель'}`;
-    const minTimeline = Math.max(2, Math.round(pages / 4) + (designCost > 0 ? 1 : 0));
-    const maxTimeline = Math.max(minTimeline + 1, Math.round(pages / 2) + (addonsTotal > 15000 ? 2 : 1));
-    if (estimateTimeline) estimateTimeline.textContent = `${minTimeline}–${maxTimeline} ${lang === 'en' ? 'weeks' : 'недель'}`;
+    if (deadlineOutput) deadlineOutput.value = formatWeeks(deadlineMin, deadlineMax);
+    if (estimateTimeline) estimateTimeline.textContent = formatWeeks(minTimeline, maxTimeline);
 
     const complexity = Math.min(100, Math.round(base / 1800 + pages * 1.8 + addonsTotal / 1600 + designCost / 1200 + seoCost / 1600));
     if (complexityValue) complexityValue.textContent = lang === 'en'
@@ -395,25 +401,83 @@ const mobileNav = document.getElementById('mobileNav');
 const mobileNavClose = document.getElementById('mobileNavClose');
 
 if (burgerBtn && mobileNav) {
+  const focusableSelector = 'a[href], button:not([disabled])';
+  const getFocusableItems = () => Array.from(mobileNav.querySelectorAll(focusableSelector));
+  let lastFocusedElement = null;
+
+  const syncMenuState = (isOpen) => {
+    mobileNav.classList.toggle('open', isOpen);
+    mobileNav.setAttribute('aria-hidden', String(!isOpen));
+    burgerBtn.classList.toggle('open', isOpen);
+    burgerBtn.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
+  };
+
   const openMenu = () => {
-    mobileNav.classList.add('open');
-    burgerBtn.classList.add('open');
-    burgerBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : burgerBtn;
+    syncMenuState(true);
+    requestAnimationFrame(() => {
+      mobileNavClose?.focus();
+    });
   };
-  const closeMenu = () => {
-    mobileNav.classList.remove('open');
-    burgerBtn.classList.remove('open');
-    burgerBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+
+  const closeMenu = ({ restoreFocus = true } = {}) => {
+    syncMenuState(false);
+    if (restoreFocus && lastFocusedElement instanceof HTMLElement) {
+      lastFocusedElement.focus();
+    }
   };
-  burgerBtn.addEventListener('click', openMenu);
-  mobileNavClose?.addEventListener('click', closeMenu);
-  mobileNav.addEventListener('click', (e) => {
-    if (e.target === mobileNav || e.target.tagName === 'A') closeMenu();
+
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = burgerBtn.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeMenu({ restoreFocus: false });
+      burgerBtn.focus();
+      return;
+    }
+    openMenu();
   });
+
+  mobileNavClose?.addEventListener('click', () => closeMenu());
+
+  mobileNav.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof HTMLElement)) return;
+    if (target.closest('[data-menu-close]') || target.closest('a')) {
+      closeMenu({ restoreFocus: false });
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
+    if (burgerBtn.getAttribute('aria-expanded') !== 'true') return;
+
+    if (e.key === 'Escape') {
+      closeMenu();
+      return;
+    }
+
+    if (e.key !== 'Tab') return;
+
+    const items = getFocusableItems();
+    if (!items.length) return;
+
+    const first = items[0];
+    const last = items[items.length - 1];
+    const active = document.activeElement;
+
+    if (e.shiftKey && active === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980 && burgerBtn.getAttribute('aria-expanded') === 'true') {
+      closeMenu({ restoreFocus: false });
+    }
   });
 }
 
@@ -430,10 +494,13 @@ if (backToTop) {
 
 // ===== ACTIVE NAV LINK =====
 const currentPage = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-link').forEach(link => {
+document.querySelectorAll('.nav-link, .mobile-nav a').forEach((link) => {
   const href = link.getAttribute('href');
   if (href === currentPage || (currentPage === '' && href === 'index.html')) {
     link.classList.add('active');
+    if (link.closest('.mobile-nav')) {
+      link.setAttribute('aria-current', 'page');
+    }
   }
 });
 
