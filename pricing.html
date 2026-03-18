@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sergey Chauzov — Pricing & Estimator</title>
-  <meta name="description" content="Пакеты разработки и интерактивный калькулятор стоимости сайта с оценкой сроков и сложности." />
+  <title>Sergey Chauzov — Пакеты и калькулятор</title>
+  <meta name="description" content="Пакеты fullstack-разработки сайтов, доработок и исправления ошибок с интерактивным калькулятором стоимости." />
   <link rel="canonical" href="https://sergey-chauzov.dev/pricing.html" />
   <link rel="alternate" hreflang="ru" href="https://sergey-chauzov.dev/pricing.html" />
   <link rel="alternate" hreflang="en" href="https://sergey-chauzov.dev/pricing.html?lang=en" />
@@ -18,6 +18,7 @@
       <nav class="nav"><a class="nav-link" href="development.html">Процесс</a><a class="nav-link" href="services.html">Услуги</a></nav>
       <a class="center-logo" href="index.html" aria-label="На главную"><img src="smalllogo.svg" class="small-logo" alt="Логотип" /></a>
       <nav class="nav"><a class="nav-link active" href="pricing.html">Пакеты</a><a class="nav-link" href="info.html">Контакты</a></nav>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
       <button id="themeToggle" class="control-btn" aria-label="Сменить тему">☀️</button>
     </div>
   </header>
@@ -25,68 +26,72 @@
   <main>
     <section class="container hero reveal">
       <p id="pricingBadge" class="badge">Прозрачная модель стоимости</p>
-      <h1 id="pricingTitle">Три масштаба проекта + интерактивный калькулятор бюджета</h1>
-      <p id="pricingLead" class="lead">Выберите ориентир по уровню проекта, затем настройте калькулятор и получите прогноз по стоимости, сроку и сложности.</p>
+      <h1 id="pricingTitle">Три формата работы + продвинутый калькулятор бюджета</h1>
+      <p id="pricingLead" class="lead">Выберите формат: новый сайт, доработка или исправление ошибок. Настройте параметры и получите ориентир по стоимости, сроку и сложности.</p>
     </section>
 
     <section class="container grid three reveal">
       <article class="card pricing-card">
-        <h2>Start</h2>
+        <h2>Старт</h2>
         <p class="price">от 25 000 ₽</p>
-        <ul><li id="priceStart1">Лендинг / MVP</li><li id="priceStart2">Базовая SEO-структура</li><li id="priceStart3">Запуск за 2–4 недели</li></ul>
+        <ul><li id="priceStart1">Лендинг / минимальный запуск</li><li id="priceStart2">Базовая SEO-структура</li><li id="priceStart3">Запуск за 2–4 недели</li></ul>
       </article>
       <article class="card pricing-card featured">
-        <h2>Growth</h2>
+        <h2>Рост</h2>
         <p class="price">от 45 000 ₽</p>
-        <ul><li id="priceGrowth1">Сайт услуг / корпоративный</li><li id="priceGrowth2">Аналитика + события</li><li id="priceGrowth3">Рост по этапам</li></ul>
+        <ul><li id="priceGrowth1">Сайт услуг / корпоративный сайт</li><li id="priceGrowth2">Аналитика и события</li><li id="priceGrowth3">Рост по этапам</li></ul>
       </article>
       <article class="card pricing-card">
-        <h2>Scale</h2>
+        <h2>Масштаб</h2>
         <p class="price">от 105 000 ₽</p>
-        <ul><li id="priceScale1">Сложные сценарии и интеграции</li><li id="priceScale2">Кастомные модули</li><li id="priceScale3">Техподдержка и SLA</li></ul>
+        <ul><li id="priceScale1">Сложные сценарии и интеграции</li><li id="priceScale2">Кастомные модули</li><li id="priceScale3">Поддержка и SLA</li></ul>
       </article>
     </section>
 
     <section class="container reveal">
       <article class="card estimator-shell premium-estimator">
         <div class="estimator-head">
-          <p class="eyebrow">Smart Estimator 2.0</p>
+          <p class="eyebrow">Смарт-калькулятор 2.0</p>
           <h2 id="calcTitle">Продвинутый калькулятор бюджета</h2>
-          <p id="calcLead" class="section-lead">Настройте параметры проекта как в реальном пресейле: объём, скорость, уровень дизайна, SEO и интеграции. Калькулятор покажет стоимость, срок, сложность и распределение сметы.</p>
+          <p id="calcLead" class="section-lead">Настройте проект как на реальном предварительном расчете: объём, скорость, уровень дизайна, SEO и интеграции. Калькулятор покажет стоимость, срок, сложность и распределение сметы.</p>
         </div>
         <div class="estimator-grid">
           <div class="estimator-form">
-            <label id="calcPagesLabel" for="pageCount">Количество страниц</label>
-            <div class="range-label"><input id="pageCountOutput" value="6" readonly /><input id="deadlineOutput" value="6 недель" readonly /></div>
-            <input id="pageCount" type="range" min="1" max="40" value="6" />
+            <div class="calc-range-stack">
+              <div class="calc-range-readout"><input id="pageCountOutput" value="6" readonly /><input id="deadlineOutput" value="6 недель" readonly /></div>
+              <label id="calcPagesLabel" for="pageCount">Количество страниц</label>
+              <input id="pageCount" type="range" min="1" max="40" value="6" />
+            </div>
 
-            <label id="calcDeadlineLabel" for="deadline">Желаемый дедлайн</label>
-            <input id="deadline" type="range" min="2" max="16" value="6" />
+            <div class="calc-range-stack calc-range-stack-deadline">
+              <label id="calcDeadlineLabel" for="deadline">Желаемый дедлайн</label>
+              <input id="deadline" type="range" min="0" max="10" value="2" />
+            </div>
 
             <label id="calcDesignLabel" for="designLevel">Уровень визуального продакшена</label>
             <select id="designLevel" class="calc-select">
-              <option value="0">Core UI</option>
-              <option value="18000" selected>Premium Brand</option>
-              <option value="36000">Cinematic Direction</option>
+              <option value="0">Базовый интерфейс</option>
+              <option value="18000" selected>Премиальный бренд-уровень</option>
+              <option value="36000">Кинематографичное направление</option>
             </select>
 
-            <label id="calcSeoLabel" for="seoPack">SEO пакет</label>
+            <label id="calcSeoLabel" for="seoPack">Пакет SEO</label>
             <select id="seoPack" class="calc-select">
               <option value="0">Базовый</option>
-              <option value="14000" selected>Business SEO</option>
-              <option value="28000">Growth SEO Cluster</option>
+              <option value="14000" selected>Бизнес SEO</option>
+              <option value="28000">SEO-кластер роста</option>
             </select>
 
             <div class="type-cards" id="projectTypeCards">
-              <label class="type-card active"><input type="radio" name="projectType" value="32000" checked /><strong>Landing</strong><span>до 8 стр.</span></label>
-              <label class="type-card"><input type="radio" name="projectType" value="58000" /><strong>Corporate</strong><span>8–20 стр.</span></label>
-              <label class="type-card"><input type="radio" name="projectType" value="120000" /><strong>Scale+</strong><span>сложный стек</span></label>
+              <label class="type-card active"><input type="radio" name="projectType" value="32000" checked /><strong>Лендинг</strong><span>до 8 стр.</span></label>
+              <label class="type-card"><input type="radio" name="projectType" value="58000" /><strong>Корпоративный</strong><span>8–20 стр.</span></label>
+              <label class="type-card"><input type="radio" name="projectType" value="120000" /><strong>Масштаб+</strong><span>сложный стек</span></label>
             </div>
 
             <div class="addon-grid">
               <label class="addon-item"><input type="checkbox" class="calc-addon" value="18000" /> CRM/ERP интеграция</label>
-              <label class="addon-item"><input type="checkbox" class="calc-addon" value="12000" /> Копирайтинг + редактура</label>
-              <label class="addon-item"><input type="checkbox" class="calc-addon" value="22000" /> Motion & advanced animation</label>
+              <label class="addon-item"><input type="checkbox" class="calc-addon" value="12000" /> Копирайтинг и редактура</label>
+              <label class="addon-item"><input type="checkbox" class="calc-addon" value="22000" /> Моушн и сложная анимация</label>
               <label class="addon-item"><input type="checkbox" class="calc-addon" value="16000" /> Мультиязычность</label>
             </div>
           </div>
@@ -108,8 +113,8 @@
       <article class="card">
         <h2 id="optTitle">Как оптимизировать бюджет без потери качества</h2>
         <ul>
-          <li id="optLi1">Запустить MVP на ключевые сценарии и масштабировать в спринтах.</li>
-          <li id="optLi2">Сначала внедрить core-страницы и лидогенерацию, затем расширять контент.</li>
+          <li id="optLi1">Запустить минимальную рабочую версию на ключевые сценарии и масштабировать проект по этапам.</li>
+          <li id="optLi2">Сначала внедрить основные страницы и лидогенерацию, затем расширять контент.</li>
           <li id="optLi3">Использовать единую дизайн-систему вместо хаотичных правок по блокам.</li>
           <li id="optLi4">Согласовывать контент заранее — это заметно ускоряет релиз.</li>
         </ul>
@@ -121,7 +126,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Sergey Chauzov</strong>
-        <p id="footerLead" class="footer-meta">Независимый веб-дизайнер и разработчик. Премиальные сайты с прозрачным процессом и фокусом на измеримый результат.</p>
+        <p id="footerLead" class="footer-meta">Fullstack-разработчик сайтов: создаю новые проекты, улучшаю текущие сайты и исправляю ошибки с фокусом на скорость, SEO и конверсию.</p>
       </div>
       <div>
         <strong id="footerSectionsTitle">Разделы</strong>
@@ -129,9 +134,26 @@
       </div>
       <div>
         <strong id="footerContactTitle">Контакты</strong>
-        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Email: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
+        <p class="footer-meta">Telegram: <a href="https://t.me/SC_WebDev" target="_blank" rel="noopener noreferrer">@SC_WebDev</a><br />Эл. почта: <a href="mailto:chuzovser094@gmail.com">chuzovser094@gmail.com</a></p>
       </div>
     </div>
   </footer>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация" aria-hidden="true">
+    <button class="mobile-nav-backdrop" type="button" data-menu-close tabindex="-1" aria-hidden="true"></button>
+    <div class="mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+      <div class="mobile-nav-head">
+        <p class="mobile-nav-caption">Пакеты</p>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Главная</a>
+        <a href="development.html">Процесс</a>
+        <a href="services.html">Услуги</a>
+        <a href="pricing.html">Пакеты</a>
+        <a href="info.html">Контакты</a>
+      </div>
+    </div>
+  </nav>
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
 </body>
 </html>
